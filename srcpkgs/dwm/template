@@ -1,14 +1,25 @@
-# Template file for 'dwm'
+# Template file for 'dwm_icon'
 pkgname=dwm
 version=6.5
-revision=1
+revision=77
+#archs="i686 x86_64"
+#build_wrksrc=
+build_style="gnu-makefile"
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="libXinerama-devel libXft-devel freetype-devel"
 makedepends="libXinerama-devel libXft-devel freetype-devel"
-short_desc="Dynamic window manager for X"
-maintainer="Orphaned <orphan@voidlinux.org>"
+depends="libXinerama-devel libXft-devel freetype-devel"
+short_desc="dwm patched"
+maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="MIT"
-homepage="https://dwm.suckless.org"
-distfiles="https://dl.suckless.org/dwm/dwm-${version}.tar.gz"
-checksum=21d79ebfa9f2fb93141836c2666cb81f4784c69d64e7f1b2352f9b970ba09729
+homepage="https://suckless.org"
+changelog="https://github.com/dani-77/dwm/releases/tag/dwm-${version}"
+distfiles="https://github.com/dani-77/dwm/archive/refs/tags/dwm-${version}.tar.gz"
+checksum=00db32d3427d70e56a5481cee7b5b9ca284761e79f9cdabab95edbc35c04c413
 
 do_build() {
 	[ -e ${FILESDIR}/config.h ] && cp ${FILESDIR}/config.h config.h
