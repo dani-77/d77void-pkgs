@@ -14,9 +14,9 @@ distfiles="https://gitlab.com/api/v4/projects/44042130/packages/generic/${_pkgna
 conflicts="librewolf"
 
 if [ "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
-	checksum=b34c791e4acad80007be8271819d2baaf7ba7f93e480eaa9a1124f2cff9e2e78
+	checksum=ab4d268abe66d0ebcfe99cdc415330e9277abf7f253b050d3b694b2e1af03710
 elif [ "$XBPS_TARGET_MACHINE" = "i686" ]; then
-	checksum=b34c791e4acad80007be8271819d2baaf7ba7f93e480eaa9a1124f2cff9e2e78
+	checksum=ab4d268abe66d0ebcfe99cdc415330e9277abf7f253b050d3b694b2e1af03710
 fi
 
 do_install() {
