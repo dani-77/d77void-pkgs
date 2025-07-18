@@ -1,7 +1,7 @@
 # Template file for 'librewolf-bin'
 pkgname=librewolf-bin
 _pkgname=${pkgname%-bin}
-version=140.0.2
+version=140.0.4
 revision=1
 _pkgrel=1
 archs="x86_64 i686"
