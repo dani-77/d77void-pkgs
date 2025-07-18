@@ -1,7 +1,7 @@
 # Template file for 'sfwbar'
 pkgname=sfwbar
 version=v1.0
-revision=2
+revision=3
 build_style=meson
 hostmakedepends="alsa-lib-devel cmake gnome-icon-theme-symbolic pkg-config pulseaudio-devel python3"
 makedepends="gtk+3-devel gtk-layer-shell-devel json-c-devel"
@@ -10,5 +10,5 @@ short_desc="flexible taskbar application for wayland"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/LBCrion/sfwbar"
-distfiles="https://github.com/LBCrion/sfwbar/archive/refs/tags/${version}_beta16.tar.gz"
-checksum=238d6394650dfdfc2f36374ec25702bbef57e2cff1d9a149ecb9a52f887c3cdf
+distfiles="https://github.com/LBCrion/sfwbar/archive/refs/tags/${version}_beta16.1.tar.gz"
+checksum=98f3d77713a2e3a10fcb09c365c92fa96ab84bf157e59bd3f4d4d274ce0496e8
