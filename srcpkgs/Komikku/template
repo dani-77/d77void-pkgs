@@ -1,6 +1,6 @@
 # Template file for 'Komikku'
 pkgname=Komikku
-version=1.80.0
+version=1.82.0
 revision=1
 build_style=meson
 build_helper=gir
@@ -18,7 +18,7 @@ maintainer="Hendrik Boll <fanyx@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://codeberg.org/valos/Komikku"
 distfiles="https://codeberg.org/valos/Komikku/archive/v${version}.tar.gz"
-checksum=032f8fdb5eec5482c9bb0515cdb482024f28a87efd072cbeff2b797a3722ac3a
+checksum=5c744bb2bae9bc6b3e6d58e0fd7d70f503b1ad06385f3e3cae6052f13870ef9f
 
 if [ "$CROSS_BUILD" ]; then
 	export GI_TYPELIB_PATH="${XBPS_CROSS_BASE}/usr/lib/girepository-1.0"
