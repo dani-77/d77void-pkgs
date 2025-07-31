@@ -17,9 +17,9 @@ short_desc="dwm patched"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="MIT"
 homepage="https://suckless.org"
-changelog="https://github.com/dani-77/dwm/releases/tag/dwm-${version}"
-distfiles="https://github.com/dani-77/dwm/archive/refs/tags/dwm-${version}.tar.gz"
-checksum=00db32d3427d70e56a5481cee7b5b9ca284761e79f9cdabab95edbc35c04c413
+#changelog="https://github.com/dani-77/dwm/releases/tag/dwm-${version}"
+distfiles="https://dl.suckless.org/$pkgname/$pkgname-$version.tar.gz"
+checksum=21d79ebfa9f2fb93141836c2666cb81f4784c69d64e7f1b2352f9b970ba09729
 
 do_build() {
 	[ -e ${FILESDIR}/config.h ] && cp ${FILESDIR}/config.h config.h
