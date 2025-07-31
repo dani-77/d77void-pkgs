@@ -15,4 +15,7 @@ checksum=72e582920ba25a646203e93c2d2331d87f03037a28894d6c7e99af00ee043257
 
 post_install() {
 	vlicense LICENSE
+	install -Dm644 *.desktop -t ${DESTDIR}/usr/share/applications
+	cp surf.png suckless-surf.png
+	install -Dm644 suckless-surf.png -t ${DESTDIR}/usr/share/pixmaps
 }

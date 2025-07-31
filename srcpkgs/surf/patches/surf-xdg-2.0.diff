@@ -53,7 +53,7 @@ index 0000000..f8ca41f
 +GenericName=Web Browser
 +Comment=A simple web browser based on WebKit2/GTK+, with tabbed.
 +Keywords=Internet;WWW;Browser;Web;Explorer
-+Exec=/usr/local/bin/surf-open %u
++Exec=/usr/bin/surf-open %u
 +Terminal=false
 +Type=Application
 +MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
@@ -82,7 +82,7 @@ index 0000000..6ba56b6
 +GenericName=Web Browser
 +Comment=A simple web browser based on WebKit2/GTK+.
 +Keywords=Internet;WWW;Browser;Web;Explorer
-+Exec=/usr/local/bin/surf %u
++Exec=/usr/bin/surf %u
 +Terminal=false
 +Type=Application
 +MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
