@@ -1220,8 +1220,8 @@ libjansson.so.4 jansson-2.4_1
 libleveldb.so.1 leveldb-1.8.0_1
 libcprops.so.15 libcprops-0.1.12_1
 libopus.so.0 opus-1.0.2_1
-libconfig++.so.11 libconfig++-1.7.1_1
-libconfig.so.11 libconfig-1.7.1_1
+libconfig++.so.15 libconfig++-1.8.1_1
+libconfig.so.15 libconfig-1.8.1_1
 libopusfile.so.0 opusfile-0.12_2
 libopusurl.so.0 opusfile-0.12_2
 libopusenc.so.0 libopusenc-0.2_1
@@ -4568,3 +4568,4 @@ libqlementine.so.1 qlementine-1.2.2_1
 libkwin.so.6 kwin-6.3.3.1_1
 libkwin-x11.so.6 kwin-x11-6.4.3_1
 libdatovka.so.8 libdatovka-0.7.0_1
+libhyprutils.so.6 hyprutils-0.7.1_1
