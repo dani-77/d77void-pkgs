@@ -3,7 +3,7 @@ pkgname=freetube-bin
 version=0.23.5
 revision=1
 archs="x86_64"
-build_style=fetch
+build_style=bsdtar
 depends="liberation-fonts-ttf"
 short_desc="Open Source YouTube app for privacy (precompiled binaries)"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
@@ -13,7 +13,7 @@ changelog="https://github.com/FreeTubeApp/FreeTube/releases/tag/v${version}"
 distfiles="https://github.com/FreeTubeApp/Freetube/releases/download/v${version}-beta/${pkgname%-bin}_${version}_amd64.deb
  https://github.com/FreeTubeApp/FreeTube/blob/v${version}-beta/LICENSE"
 checksum="0cf6605b489493752946b7bf995a4dbcaf95b8df9f6c42f9ad181ed007ad87b2
- bf8dbe35dfc2eb16ec3828eb3d9c720c790a69265610afbb0e71e970e3b41232"
+ 7eacd823edb22f472acd17704f871cf5d1210d60a33a85f5fb6b9af24575ced8"
 nopie=yes
 
 do_install() {
