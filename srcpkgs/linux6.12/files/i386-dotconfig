@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/i386 6.12.40 Kernel Configuration
+# Linux/i386 6.12.41 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (GCC) 14.2.1 20250405"
 CONFIG_CC_IS_GCC=y
@@ -3866,7 +3866,7 @@ CONFIG_RTW89_8852AE=m
 CONFIG_RTW89_8852BE=m
 # CONFIG_RTW89_8852BTE is not set
 # CONFIG_RTW89_8852CE is not set
-# CONFIG_RTW89_8922AE is not set
+CONFIG_RTW89_8922AE=m
 # CONFIG_RTW89_DEBUGMSG is not set
 # CONFIG_RTW89_DEBUGFS is not set
 CONFIG_WLAN_VENDOR_RSI=y
