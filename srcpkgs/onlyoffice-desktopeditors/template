@@ -2,7 +2,7 @@
 # Reference was taken from AUR: https://aur.archlinux.org/packages/onlyoffice-bin
 pkgname=onlyoffice-desktopeditors-bin
 _pkgname=${pkgname%-bin}
-version=9.0.3
+version=9.0.4
 revision=1
 archs="x86_64"
 depends="curl xdg-utils dejavu-fonts-ttf liberation-fonts-ttf
