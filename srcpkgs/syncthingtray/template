@@ -1,6 +1,6 @@
 # Template file for 'syncthingtray'
 pkgname=syncthingtray
-version=1.7.10
+version=2.0.1
 revision=2
 build_style=cmake
 configure_args="-DBUILTIN_TRANSLATIONS=ON -DSYSTEMD_SUPPORT=OFF
@@ -10,14 +10,14 @@ makedepends="cpp-utilities-devel qtutilities-devel qtforkawesome-devel
  boost-devel-minimal libboost_filesystem
  qt6-base-devel qt6-declarative-devel qt6-svg-devel libplasma-devel kf6-kconfig-devel
  kf6-kio-devel"
-depends="syncthing qt6-plugin-tls-openssl qt6-svg"
+depends="syncthing qt6-plugin-tls-openssl qt6-svg qt6-plugin-networkinformation"
 checkdepends="syncthing iproute2"
 short_desc="Tray application for Syncthing"
 maintainer="classabbyamp <void@placeviolette.net>"
 license="GPL-2.0-or-later"
 homepage="https://martchus.github.io/syncthingtray/"
 distfiles="https://github.com/Martchus/syncthingtray/archive/refs/tags/v${version}.tar.gz"
-checksum=5cead81878fa03a981b741e2570acb13b63626a4b520f60bc2a1d8ed83b3a7c1
+checksum=3d1076beffb56dbfa70b6f7125e508de4c62a16b181b53fd467f40c045511500
 
 # requires weird port-binding shenanigans that may not work on ipv6
 # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=syncthingtray#n50
