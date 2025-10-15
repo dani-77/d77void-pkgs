@@ -1,0 +1,18 @@
+# Template file for 'brave-bin'
+pkgname=brave-bin
+version=1.80.115
+revision=1
+archs="x86_64"
+build_style="fetch"
+short_desc="Secure, fast and private web browser with ad blocker"
+maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
+hostmakedepends="tar xz"
+license="MPL-2.0"
+homepage="https://brave.com"
+distfiles="https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser_${version}_amd64.deb"
+checksum=09fecccb9993922661e713138a78662a71cf256317e507e28ceedb115ea1eab5
+
+do_install() {
+	ar x brave-browser_${version}_amd64.deb
+	tar xf data.tar.xz -C ${DESTDIR}
+}
