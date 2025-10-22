@@ -1,7 +1,7 @@
 # Template file for 'calamares'
 pkgname=calamares
 version=3.4.0
-revision=3
+revision=4
 build_style=cmake
 configure_args="
     -DWITH_PYTHON:BOOL=ON
@@ -14,7 +14,7 @@ configure_args="
     -DCMAKE_BUILD_TYPE=Release
     -DSKIP_MODULES='webview;interactiveterminal;services-systemd;dummyprocess;dummypython;dummycpp;dummypythonqt;oemid;tracking;packagechooser;'"
 hostmakedepends="git extra-cmake-modules pkg-config gettext
-    ckbcomp kf6-kcoreaddons kpmcore python3-yaml clang qt6-tools"
+    ckbcomp kf6-kcoreaddons kdelibs4support python3-yaml clang qt6-tools"
 makedepends="python3-devel python3-jsonschema yaml-cpp-devel qt6-base-devel python3-devel kpmcore-devel
     qt6-tools-devel qt6-translations qt6-svg-devel libpwquality-devel"
 depends="kf6-kconfig kf6-kcoreaddons kf6-kiconthemes kf6-ki18n kf6-kio yaml-cpp kpmcore boost ckbcomp
