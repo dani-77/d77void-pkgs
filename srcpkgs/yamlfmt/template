@@ -1,6 +1,6 @@
 # Template file for 'yamlfmt'
 pkgname=yamlfmt
-version=0.17.2
+version=0.19.0
 revision=1
 build_style=go
 go_import_path="github.com/google/yamlfmt"
@@ -10,7 +10,7 @@ maintainer="Bnyro <bnyro@tutanota.com>"
 license="Apache-2.0"
 homepage="https://github.com/google/yamlfmt"
 distfiles="https://github.com/google/yamlfmt/archive/refs/tags/v${version}.tar.gz"
-checksum=bc186eddc322c9a12b0d22e15e1feb54f85ab2ecc9db2cb4837ab770d51a70ea
+checksum=257dd1521895c6b22ab4c71c27fa27f2290d05cedd0734f819573b509039e9b2
 
 do_check() {
 	make test_v
