@@ -1,6 +1,6 @@
 # Template file for 'calamares'
 pkgname=calamares
-version=3.4.0
+version=3.3.14
 revision=4
 build_style=cmake
 configure_args="
@@ -24,8 +24,8 @@ short_desc="Distribution-independent installer framework"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://calamares.io"
-distfiles="https://codeberg.org/Calamares/${pkgname}/releases/download/v${version}/${pkgname}-${version}.tar.gz"
-checksum=d48eaf946e19ee62a3c2b5c204bb1b2f6d3b16349f6fecf03eeb725fe2e32b06
+distfiles="https://github.com/${pkgname}/${pkgname}/releases/download/v${version}/${pkgname}-${version}.tar.gz"
+checksum=5547f80db067dea923ae693ba6bb88eb2b2eeac1da3ebec42fce453e31c290c0
 
 case ${XBPS_TARGET_MACHINE} in
 	*-musl)
