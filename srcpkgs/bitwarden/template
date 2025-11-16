@@ -1,6 +1,6 @@
 # Template file for 'bitwarden'
 pkgname=bitwarden
-version=2025.10.0
+version=2025.11.0
 revision=1
 hostmakedepends="bsdtar"
 short_desc="Bitwarden desktop client"
