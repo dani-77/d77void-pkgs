@@ -1,7 +1,7 @@
 # Template file for 'ipscan'
 pkgname=ipscan
 version=3.9.3
-revision=1
+revision=3
 #archs="i686 x86_64"
 #build_wrksrc=
 #configure_args=""
@@ -23,4 +23,6 @@ checksum=44b76572bb6959c3b8cfb70a48dfb2f54273301b67962da602fb8949708ca095
 do_install() {
 	ar x ipscan_${version}_amd64.deb
         tar xf data.tar.xz -C ${DESTDIR}
+	vsed -i 's|sh /usr/bin/ipscan|java -jar /usr/lib64/ipscan/ipscan-linux64-3.9.3.jar|' ${DESTDIR}/usr/share/applications/ipscan.desktop
+	rm ${DESTDIR}/usr/bin/ipscan
 }
