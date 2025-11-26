@@ -1,0 +1,49 @@
+# layout and style
+bottom_bar	    : false
+height              : 19
+vertical_padding    : 0
+horizontal_padding  : 0
+text_padding        : 0
+border              : false
+border_width        : 0
+background_colour   : #000000
+foreground_colour   : #7abccd
+border_colour       : #005577
+font                : iosevka
+font_size           : 14
+
+# modules
+module.4.name       : clock
+module.4.cmd        : date '+%H:%M:%S'
+module.4.enabled    : true
+module.4.interval   : 1
+
+module.5.name       : date
+module.5.cmd        : date '+%Y-%m-%d'
+module.5.enabled    : true
+module.5.interval   : 60
+
+module.0.name       : battery
+module.0.cmd        : cat /sys/class/power_supply/BAT0/capacity 2>/dev/null | sed 's/$/%/' || echo 'N/A'
+module.0.enabled    : true
+module.0.interval   : 30
+
+module.3.name       : volume
+module.3.cmd        : amixer get Master | grep -o '[0-9]*%' | head -1 || echo 'N/A'
+module.3.enabled    : false
+module.3.interval   : 5
+
+module.1.name       : cpu
+module.1.cmd        : top -bn1 | grep 'Cpu(s)' | sed 's/.*, *\([0-9.]*\)%* id.*/\1/' | awk '{print $1"%"}'
+module.1.enabled    : true
+module.1.interval   : 3
+
+module.2.name	    : mem
+module.2.cmd	    : free -h | awk '/^Mem/ { print $3 }' | sed s/i//g
+module.2.enabled    : true
+module.2.interval   : 3
+
+module.6.name	    : wlan
+module.6.cmd	    : cat /sys/class/net/wl*/operstate 2>/dev/null
+module.6.enabled    : false
+module.6.interval   : 30
