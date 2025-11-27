@@ -22,8 +22,7 @@ distfiles="https://github.com/dani-77/${pkgname}/archive/refs/tags/${version}.ta
 checksum=8dfbf68f48e8ff1091641c437dcdeb01cafd6ae3572a9adfa11a927bec45a973
 
 do_build() {
-	rm Makefile
-	cp ${FILESDIR}/xbps ./Makefile
+	cp ${FILESDIR}/xbps Makefile
 	[ -e ${FILESDIR}/config.h ] && cp ${FILESDIR}/config.h config.h
 	vsed -e "/CFLAGS/s|\${CPPFLAGS}|& $CFLAGS|g" -i config.mk
 	make CC=$CC INCS="-I. -I${XBPS_CROSS_BASE}/usr/include/freetype2" LIBS="-lImlib2 -lX11 -lXinerama -lXft -lXrender -lfontconfig"
