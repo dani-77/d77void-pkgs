@@ -1,7 +1,7 @@
 # Template file for 'chadwm'
 pkgname=chadwm
 version=6.5
-revision=1
+revision=2
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style=gnu-makefile
@@ -19,7 +19,7 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/dani-77/chadwm"
 #changelog=""
 distfiles="https://github.com/dani-77/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum=08d96bdb66802e6b8b495a7f30f7f2847a105954942382494148bdc1e84e3f8b
+checksum=75ba0fcc2e0f2e0be58d0ec5f13491f2b6930a83e247f22c8ad3bd04bac18fcb
 
 do_build() {
 	cp ${FILESDIR}/xbps Makefile
