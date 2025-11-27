@@ -19,7 +19,7 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/dani-77/chadwm"
 #changelog=""
 distfiles="https://github.com/dani-77/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum=8dfbf68f48e8ff1091641c437dcdeb01cafd6ae3572a9adfa11a927bec45a973
+checksum=08d96bdb66802e6b8b495a7f30f7f2847a105954942382494148bdc1e84e3f8b
 
 do_build() {
 	cp ${FILESDIR}/xbps Makefile
