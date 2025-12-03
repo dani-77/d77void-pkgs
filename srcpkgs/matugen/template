@@ -1,0 +1,16 @@
+# Template file for 'matugen'
+pkgname=matugen
+version=3.1.0
+revision=1
+build_style=cargo
+build_helper="qemu"
+hostmakedepends="pkg-config python3 cmake clang rust-bindgen"
+#makedepends=""
+#depends=""
+short_desc="A material you color generation tool"
+maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
+license="BSD-2-Clause"
+homepage="https://github.com/InioX/matugen"
+changelog="https://github.com/InioX/${pkgname}/releases/tag/v${version}"
+distfiles="https://github.com/InioX/${pkgname}/archive/refs/tags/v${version}.tar.gz"
+checksum=f00b7bd284ef6184a0c94d54cb745230c6e58f26012491eaf7f7bcea0f3a489b
