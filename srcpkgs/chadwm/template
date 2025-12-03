@@ -1,7 +1,7 @@
 # Template file for 'chadwm'
 pkgname=chadwm
 version=6.5
-revision=2
+revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style=gnu-makefile
@@ -19,10 +19,11 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/dani-77/chadwm"
 #changelog=""
 distfiles="https://github.com/dani-77/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum=75ba0fcc2e0f2e0be58d0ec5f13491f2b6930a83e247f22c8ad3bd04bac18fcb
+checksum=5cf5c404872a7f0bee23df8af14e96c29e4cede291754c9517f9c2044af9e3dd
 
 do_build() {
-	cp ${FILESDIR}/xbps Makefile
+	rm Makefile
+	cp ${FILESDIR}/xbps ./Makefile
 	[ -e ${FILESDIR}/config.h ] && cp ${FILESDIR}/config.h config.h
 	vsed -e "/CFLAGS/s|\${CPPFLAGS}|& $CFLAGS|g" -i config.mk
 	make CC=$CC INCS="-I. -I${XBPS_CROSS_BASE}/usr/include/freetype2" LIBS="-lImlib2 -lX11 -lXinerama -lXft -lXrender -lfontconfig"

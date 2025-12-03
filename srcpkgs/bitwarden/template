@@ -1,18 +1,14 @@
 # Template file for 'bitwarden'
 pkgname=bitwarden
-version=2025.11.0
-revision=2
+version=2025.10.0
+revision=1
 hostmakedepends="bsdtar"
 short_desc="Bitwarden desktop client"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://bitwarden.com"
 distfiles="https://github.com/bitwarden/clients/releases/download/desktop-v${version}/Bitwarden-${version}-amd64.deb"
-checksum=33d4e72f7a56a9f8c0a30b115acc842783cb11ac0a23f1cc384a6a282d34eef9
-
-pre_install() {
-	vsed -i 's|bitwarden %U|bitwarden-app %U|' usr/share/applications/bitwarden.desktop
-}
+checksum=087bafae84e9dc5ee792e0933e5a7a485d427f1205f712329afc70d4c056ad3c
 
 do_install() {
 	vmkdir /usr
