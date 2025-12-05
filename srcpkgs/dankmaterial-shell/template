@@ -36,6 +36,7 @@ do_install() {
 	rm -rf ./completions
 	rm -rf ./docs
 	rm dms-full-amd64.tar.gz
+	rm INSTALL.md
 	
 	vmkdir /etc/xdg/quickshell/dms
 	vcopy '*' /etc/xdg/quickshell/
