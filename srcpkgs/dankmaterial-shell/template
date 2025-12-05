@@ -1,7 +1,7 @@
 # Template file for 'dankmaterial-shell'
 pkgname=dankmaterial-shell
 version=0.6.2
-revision=1
+revision=2
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style="fetch"
@@ -12,7 +12,7 @@ build_style="fetch"
 #make_dirs="/var/log/dir 0755 root root"
 #hostmakedepends="go"
 #makedepends=""
-depends="quickshell accountsservice cava cliphist i2c-tools matugen qt6-multimedia power-profiles-daemon"
+depends="quickshell dgop accountsservice cava cliphist i2c-tools matugen qt6-multimedia power-profiles-daemon"
 short_desc="Desktop shell for wayland compositors built with Quickshell & GO"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="MIT"
