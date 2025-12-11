@@ -100,7 +100,7 @@ pkgname=foo
 version=1.0
 revision=1
 build_style=gnu-configure
-short_desc="A short description max 72 chars"
+short_desc="Package description, no more than 72 characters"
 maintainer="name <email>"
 license="GPL-3.0-or-later"
 homepage="http://www.foo.org"
@@ -367,7 +367,7 @@ The following variables are defined by `xbps-src` and can be used on any templat
 
 - `makejobs` Set to `-jX` if `XBPS_MAKEJOBS` is defined, to allow parallel jobs with `GNU make`.
 
-- `sourcepkg`  Set to the to main package name, can be used to match the main package
+- `sourcepkg`  Set to the main package name, can be used to match the main package
 rather than additional binary package names.
 
 - `CHROOT_READY`  Set if the target chroot (masterdir) is ready for chroot builds.

@@ -1,11 +1,11 @@
 # Template file for 'gpu-screen-recorder'
 pkgname=gpu-screen-recorder
-version=r1220.c1614e4
+version=r1228.4363f8b
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style=meson
-#configure_args=""
+configure_args="--buildtype=release -Dstrip=true"
 #make_build_args=""
 #make_install_args=""
 #conf_files=""
@@ -15,13 +15,13 @@ makedepends="ffmpeg-devel libXcomposite-devel libXrandr-devel libXdamage-devel l
 depends="ffmpeg libXcomposite libXrandr libXdamage libX11 pulseaudio libva libdrm libcap pipewire dbus wayland"
 short_desc="A shadowplay-like screen recorder for Linux."
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
-license="GPL-3.0-or-later"
+license="GPL-3.0"
 homepage="https://git.dec05eba.com/gpu-screen-recorder"
 #changelog=""
 distfiles="https://dec05eba.com/snapshot/${pkgname}.git.${version}.tar.gz"
-checksum=dfff21644e0df81e2de9241bcb6999509d8d116d2f67598387518f620c688dc6
+checksum=9157320518b76f198409a1557bb202e6d4a606d273960fa7a0e4588a5e33440e
 
 do_install() {
-	vmkdir /usr/bin
-	vcopy ./build/gpu-screen-recorder /usr/bin/
+	metapackage=yes
+	meson install -C build --destdir ${PKGDESTDIR}
 }
