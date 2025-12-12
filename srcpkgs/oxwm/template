@@ -1,0 +1,27 @@
+# Template file for 'oxwm'
+pkgname=oxwm
+version=0.8.0
+revision=1
+#archs="i686 x86_64"
+#build_wrksrc=
+build_style=cargo
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="make libX11-devel libXft-devel freetype-devel fontconfig-devel pkg-config"
+#makedepends=""
+depends="libX11 libXft freetype fontconfig"
+short_desc="A dynamic window manager written in Rust"
+maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
+license="GPL-3.0-or-later"
+homepage="https://ox-docs.vercel.app/"
+#changelog=""
+distfiles="https://github.com/tonybanters/${pkgname}/archive/refs/tags/v${version}.tar.gz"
+checksum=67017b1caac1557dae96696fbf98def8bd2f5a90aad0315b9294e7cee527e24a
+
+pre_install() {
+	vmkdir /usr/share/xsessions
+	vcopy ${FILESDIR}/oxwm.desktop /usr/share/xsessions/
+}

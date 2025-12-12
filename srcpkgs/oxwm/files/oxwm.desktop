@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=oxwm
+Comment=WM written in Rust
+Exec=/usr/bin/oxwm
+Type=Application
