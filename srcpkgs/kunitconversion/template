@@ -12,7 +12,6 @@ license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kunitconversion"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=ef689b29a27e57b6e5b41107d6fbb0252aba6788f6f96e079da0bddbc43a1c94
-repository=d77
 
 kunitconversion-devel_package() {
 	short_desc+=" - development"

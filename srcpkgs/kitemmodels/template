@@ -11,7 +11,6 @@ license="LGPL-2.0-or-later"
 homepage="https://invent.kde.org/frameworks/kitemmodels"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=537cee9bbadf5471e5217e48605adbf941335de45f0041e7d5a31422e4b49ff1
-repository=d77
 
 kitemmodels-devel_package() {
 	short_desc+=" - development"
