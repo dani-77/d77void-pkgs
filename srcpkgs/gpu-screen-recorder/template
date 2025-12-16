@@ -20,6 +20,7 @@ homepage="https://git.dec05eba.com/gpu-screen-recorder"
 #changelog=""
 distfiles="https://dec05eba.com/snapshot/${pkgname}.git.${version}.tar.gz"
 checksum=9157320518b76f198409a1557bb202e6d4a606d273960fa7a0e4588a5e33440e
+repository=d77
 
 do_install() {
 	metapackage=yes

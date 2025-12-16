@@ -21,6 +21,7 @@ changelog="https://github.com/Yubico/${pkgname}/releases/tag/${version}"
 distfiles="https://developers.yubico.com/${pkgname}/Releases/yubico-authenticator-latest-linux.tar.gz"
 checksum=a82aa86a60f16d2d6bb07789f33d3256e12b7d2f231a0d6625dea1706c4069e1
 nopie=yes
+repository=d77
 
 do_build() {
 	vextract yubico-authenticator-latest-linux.tar.gz

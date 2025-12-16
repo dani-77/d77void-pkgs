@@ -20,6 +20,7 @@ homepage="https://github.com/noctalia-dev/noctalia-shell"
 changelog="https://github.com/noctalia-dev/${pkgname}/releases/tag/v${version}"
 distfiles="https://github.com/noctalia-dev/${pkgname}/releases/download/v${version}/noctalia-v${version}.tar.gz"
 checksum=1f6fdf945168852fb3c1993c6474a3edb5e7faab9a5605c85b625cbf88e4492e
+repository=d77
 
 do_install() {
 	vextract noctalia-v${version}.tar.gz

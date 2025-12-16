@@ -12,6 +12,7 @@ license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kplotting"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=bc3703f2ccd5d9d6a5e881a9476a6d21b2722aecbe5dfe48c03d1008772be579
+repository=d77
 
 kplotting-devel_package() {
 	short_desc+=" - development"

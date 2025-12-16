@@ -11,6 +11,7 @@ homepage="https://github.com/dylanaraps/neofetch"
 changelog="https://github.com/dylanaraps/neofetch/releases/tag/${version}"
 distfiles="${homepage}/archive/${version}/${pkgname}-${version}.tar.gz"
 checksum=58a95e6b714e41efc804eca389a223309169b2def35e57fa934482a6b47c27e7
+repository=d77
 
 post_install() {
 	vlicense LICENSE.md

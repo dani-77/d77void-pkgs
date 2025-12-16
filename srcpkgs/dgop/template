@@ -20,6 +20,7 @@ homepage="https://github.com/AvengeMedia/dgop"
 changelog="https://github.com/AvengeMedia/dgop/releases/tag/v${version}"
 distfiles="https://github.com/AvengeMedia/${pkgname}/archive/refs/tags/v${version}.tar.gz"
 checksum=b35532e10e11fb38c51476fd812dc410a956c96d33bab8dd34b5fc269b791e1a
+repository=d77
 
 do_install() {
 	vmkdir /usr/bin

@@ -20,6 +20,7 @@ homepage="https://github.com/odknt/bspwmbar"
 #changelog=""
 distfiles="https://github.com/odknt/${pkgname}/archive/v${version}.tar.gz"
 checksum=ac5414238c4f195f761c33a7ba87b1a13d4b72fb3f5b7f6a513cf83112345c6f
+repository=d77
 
 do_build() {
 	./configure

@@ -15,6 +15,7 @@ distfiles="https://github.com/FreeTubeApp/Freetube/releases/download/v${version}
 checksum="0cf6605b489493752946b7bf995a4dbcaf95b8df9f6c42f9ad181ed007ad87b2
  e9913d94bf086bb96732c45d1c93ba53c0b95f70157e6b235e2cb3cc47edee75"
 nopie=yes
+repository=d77
 
 do_install() {
 	vextract -C "${DESTDIR}" "${pkgname%-bin}_${version}_amd64.deb"

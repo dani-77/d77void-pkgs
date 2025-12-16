@@ -13,6 +13,7 @@ license="LGPL-2.1-only"
 homepage="https://invent.kde.org/frameworks/kdesignerplugin"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/portingAids/${pkgname}-${version}.tar.xz"
 checksum=e3cf4f848ae51d0489b977ccdb20dc3131d89a076783f336cda4e39e85ba735e
+repository=d77
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" qt5-host-tools qt5-qmake qt5-tools kgendesignerplugin kdoctools"

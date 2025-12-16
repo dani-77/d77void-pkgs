@@ -9,12 +9,20 @@ hostmakedepends="pkg-config python3 cmake clang rust-bindgen"
 makedepends="openssl-devel dbus-devel pulseaudio-devel alsa-lib-devel"
 depends="ueberzug"
 short_desc="Cross-platform ncurses Spotify client"
-maintainer="Orphaned <orphan@voidlinux.org>"
+maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="BSD-2-Clause"
 homepage="https://github.com/hrkfdn/ncspot"
 changelog="https://raw.githubusercontent.com/hrkfdn/ncspot/main/CHANGELOG.md"
 distfiles="https://github.com/hrkfdn/ncspot/archive/refs/tags/v${version}.tar.gz"
 checksum=d767fbe4c742b18a3ef7203162cc55a0976e07e478295445a5de1660666e2f15
+repository=d77
+
+# FIXME: Workaround will be removed when https://github.com/aws/aws-lc-rs/issues/632 is resolved
+case "$XBPS_TARGET_MACHINE" in
+	armv[67]l)
+		export AWS_LC_SYS_CFLAGS="-Wno-stringop-overflow"
+		;;
+esac
 
 post_build() {
 	cargo auditable build --release --target ${RUST_TARGET} --package xtask

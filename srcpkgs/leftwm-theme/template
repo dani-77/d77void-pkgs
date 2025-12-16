@@ -20,3 +20,4 @@ homepage="https://github.com/leftwm/leftwm"
 changelog="https://github.com/leftwm/$pkgname/releases/tag/v$version"
 distfiles="https://github.com/leftwm/$pkgname/archive/refs/tags/v$version.tar.gz"
 checksum=3225eadf6b18eaa53beb7676be61f52378214c1ec49fb251604e9f5dc505fb57
+repository=d77

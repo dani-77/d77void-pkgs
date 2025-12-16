@@ -19,6 +19,7 @@ homepage="https://angryip.org"
 #changelog=""
 distfiles="https://github.com/angryip/ipscan/releases/download/3.9.3/ipscan_3.9.3_amd64.deb"
 checksum=44b76572bb6959c3b8cfb70a48dfb2f54273301b67962da602fb8949708ca095
+repository=d77
 
 do_install() {
 	metapackage=yes

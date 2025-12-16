@@ -20,6 +20,7 @@ homepage="https://github.com/AvengeMedia/DankMaterialShell"
 changelog="https://github.com/AvengeMedia/DankMaterialShell/releases/tag/v{version}"
 distfiles="https://github.com/AvengeMedia/DankMaterialShell/releases/download/v${version}/dms-full-amd64.tar.gz"
 checksum=0e435f84ae5e6b5ef80d9c47dbfd508e91e5bac51ee84618a2944277cfa726c5
+repository=d77
 
 do_install() {
 	vextract dms-full-amd64.tar.gz

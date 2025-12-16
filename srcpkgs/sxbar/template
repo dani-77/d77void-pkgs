@@ -20,6 +20,7 @@ homepage="https://github.com/uint23/sxbar"
 #changelog=""
 distfiles="https://github.com/uint23/${pkgname}/archive/refs/tags/v${version}.tar.gz"
 checksum=2f9de175846f13194a39dd1a497247d5d874a5f1bced4ea54577ca491e8dc459
+repository=d77
 
 do_build() {
 	cp ${FILESDIR}/default_sxbarc default_sxbarc

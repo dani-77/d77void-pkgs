@@ -11,6 +11,7 @@ license="MPL-2.0"
 homepage="https://brave.com"
 distfiles="https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser_${version}_amd64.deb"
 checksum=50f57892b2388e75cd34be918ef84efdfb714b9dde59eae71b5615548d805db8
+repository=d77
 
 do_install() {
 	ar x brave-browser_${version}_amd64.deb

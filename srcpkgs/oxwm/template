@@ -20,6 +20,7 @@ homepage="https://ox-docs.vercel.app/"
 #changelog=""
 distfiles="https://github.com/tonybanters/${pkgname}/archive/refs/tags/v${version}.tar.gz"
 checksum=bc92d0bc56ece22a7393bb32ab5ecad92a90d75b8d6e7a86250bf608b436d6f3
+repository=d77
 
 pre_install() {
 	metapackage=yes

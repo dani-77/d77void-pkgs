@@ -20,6 +20,7 @@ homepage="https://mullvad.net"
 changelog="https://github.com/mullvad/${pkgname}/releases/tag/${version}"
 distfiles="https://github.com/mullvad/mullvad-browser/releases/download/15.0.2/${pkgname}_${version}-1_amd64.deb"
 checksum=34c4b231638983416bc73766316f270893ff83b1241466edc8564f6c34608f7f
+repository=d77
 
 do_install() {
 	vextract ${pkgname}_${version}-1_amd64.deb

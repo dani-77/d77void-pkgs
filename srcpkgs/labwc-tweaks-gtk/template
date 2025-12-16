@@ -13,4 +13,4 @@ homepage="https://labwc.github.io"
 changelog="https://github.com/dani-77/labwc-tweaks-gtk/releases/tag/${version}"
 distfiles="https://github.com/dani-77/labwc-tweaks-gtk/archive/refs/tags/${version}.tar.gz"
 checksum=6c336528c7b24bb0612ec2264a74d4b68a22e68cf5026b7772de0f18b98831ce
-
+repository=d77
