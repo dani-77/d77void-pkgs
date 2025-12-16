@@ -1,7 +1,7 @@
 # Template file for 'oxwm'
 pkgname=oxwm
-version=0.8.0
-revision=2
+version=0.9.0
+revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style=cargo
@@ -19,7 +19,7 @@ license="GPL-3.0-or-later"
 homepage="https://ox-docs.vercel.app/"
 #changelog=""
 distfiles="https://github.com/tonybanters/${pkgname}/archive/refs/tags/v${version}.tar.gz"
-checksum=67017b1caac1557dae96696fbf98def8bd2f5a90aad0315b9294e7cee527e24a
+checksum=bc92d0bc56ece22a7393bb32ab5ecad92a90d75b8d6e7a86250bf608b436d6f3
 
 pre_install() {
 	metapackage=yes
