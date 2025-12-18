@@ -1,6 +1,6 @@
 # Template file for 'dgop'
 pkgname=dgop
-version=0.1.11
+version=0.1.12
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -19,7 +19,7 @@ license="MIT"
 homepage="https://github.com/AvengeMedia/dgop"
 changelog="https://github.com/AvengeMedia/dgop/releases/tag/v${version}"
 distfiles="https://github.com/AvengeMedia/${pkgname}/archive/refs/tags/v${version}.tar.gz"
-checksum=b35532e10e11fb38c51476fd812dc410a956c96d33bab8dd34b5fc269b791e1a
+checksum=dbb76f5f42ce18893a3c7ffb277e7769632d35f63bbc1d6526697dc954f0fb66
 repository=d77
 
 do_install() {

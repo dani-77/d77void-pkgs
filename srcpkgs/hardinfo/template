@@ -14,7 +14,6 @@ distfiles="${SOURCEFORGE_SITE}/${pkgname}.berlios/${pkgname}-${version}.tar.bz2"
 checksum=a0df6c0d7c92a7d20710b8eb551197398a965aaae053782b89a32a160b731b7a
 lib32disabled=yes
 nocross=yes
-repository=d77
 
 pre_configure() {
 	sed -i 's|/usr/lib64|/usr/lib|' configure
