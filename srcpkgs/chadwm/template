@@ -1,7 +1,7 @@
 # Template file for 'chadwm'
 pkgname=chadwm
 version=6.5
-revision=2
+revision=4
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style=gnu-makefile
@@ -19,7 +19,7 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/dani-77/chadwm"
 #changelog=""
 distfiles="https://github.com/dani-77/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum=75ba0fcc2e0f2e0be58d0ec5f13491f2b6930a83e247f22c8ad3bd04bac18fcb
+checksum=c42cc6780a6ead8e17c6df839ae23e58d477e533c503fe744bb8908ca9dfeabb
 repository=d77
 
 do_build() {
@@ -32,7 +32,7 @@ do_build() {
 do_install() {
         make PREFIX=/usr DESTDIR=$DESTDIR install
         vinstall ${FILESDIR}/chadwm.desktop 644 usr/share/xsessions
-	vmkdir opt/chadwm
-        vcopy ${FILESDIR}/scripts opt/chadwm
+	vmkdir etc/xdg/chadwm
+        vcopy ${FILESDIR}/scripts etc/xdg/chadwm
         vlicense LICENSE
 }

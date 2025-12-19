@@ -10,5 +10,5 @@ synclient TapButton2=3 &
 redshift -l 41.6:-8.62 &
 udiskie -a &
 
-dash /opt/chadwm/scripts/bar.sh &
+dash /etc/xdg/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
