@@ -1,6 +1,6 @@
 # Template file for 'wmd77'
 pkgname=wmd77
-version=0.1.0
+version=0.1.1
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -19,7 +19,7 @@ license="MIT"
 homepage="https://github.com/dani-77/wmd77"
 #changelog=""
 distfiles=""https://github.com/dani-77/${pkgname}/archive/refs/tags/${version}.tar.gz
-checksum=26c40226d0745c1b58e6bf87a80d023b53255ad0a9f399cc52b2f9c0a0d80688
+checksum=60267c68cfd2f02531a9c4c88c60a5250b2740ad0057e92eea35fedc69d4d5de
 repository=d77
 
 do_build() {
