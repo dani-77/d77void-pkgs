@@ -17,10 +17,9 @@ short_desc="A terminal text editor you can just use."
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://sinelaw.github.io/fresh/"
-#changelog="https://github.com/sinelaw/fresh/releases/tag/v0.1.65"
-distfiles="https://github.com/sinelaw/fresh/releases/download/v0.1.65/fresh-editor-x86_64-unknown-linux-gnu.tar.xz"
+changelog="https://github.com/sinelaw/fresh/releases/tag/v${version}"
+distfiles="https://github.com/sinelaw/fresh/releases/download/v${version}/fresh-editor-x86_64-unknown-linux-gnu.tar.xz"
 checksum=761f21315aa1206ecea0381b4ac53cc339e972b4b714660db7588279b6b99e3e
-nopie=yes
 repository=d77
 
 do_install() {
@@ -30,8 +29,8 @@ do_install() {
     vmkdir /usr/bin
     vmkdir /usr/share/licenses/$pkgname/
     vcopy fresh /usr/bin/
-    vinstall README.md 644 /usr/share/doc/fresh-editor/README.md
-    vlicense LICENSE 644 /usr/share/licenses/fresh-editor/LICENSE
+    vinstall README.md 644 /usr/share/doc/fresh-editor/
+    vlicense LICENSE /usr/share/licenses/fresh-editor/
     vcopy plugins/'*' /usr/share/fresh-editor/
 }
 
