@@ -9,14 +9,14 @@ interval=0
 . /etc/xdg/chadwm/scripts/bar_themes/dracula
 
 cpu() {
-  cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
-
+  #cpu_val=$(grep -o "^[^ ]*" /proc/loadavg) # load average
+  cpu_val=$(top -bn1 | grep 'Cpu(s)' | awk '{ print 100-$8"%"}') # %
   printf "^c$black^ ^b$green^ "
   printf "^c$white^ ^b$grey^ $cpu_val ^b$black^"
 }
 
 pkg_updates() {
-    updates=$({ timeout 20 xbps-install -un 2>/dev/null || true; } | wc -l) # void
+    updates=$({ timeout 20 xbps-install -unM 2>/dev/null || true; } | wc -l) # void
   # updates=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l) # arch
   # updates=$({ timeout 20 aptitude search '~U' 2>/dev/null || true; } | wc -l)  # apt (ubuntu, debian etc)
 
@@ -39,12 +39,32 @@ keymap() {
   printf "^c$black^ ^b$white^ "
   printf "^c$white^ ^b$grey^ $val $val2 ^b$black^"
 }
-  
-battery() {
-  val="$(cat /sys/class/power_supply/BAT0/capacity)"
-  printf "^c$black^ ^b$red^ "
-  printf "^c$white^ ^b$grey^ $val ^b$black^"
 
+bat() {
+    # Example acpi -b:
+    # Battery 0: Discharging, 53%, 02:31:12 remaining
+    # Battery 0: Charging, 82%, 00:25:10 until charged
+    local line status percent time state
+
+    line=$(acpi -b 2>/dev/null | head -n1)
+    [ -z "$line" ] && { printf "Battery: ??%% (--) --:--"; return; }
+
+    status=$(printf '%s\n' "$line" | awk -F': ' '{print $2}' | cut -d',' -f1)
+    percent=$(printf '%s\n' "$line" | grep -o '[0-9]\+%' | head -n1)
+    time=$(printf '%s\n' "$line" | grep -o '[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}' | head -n1)
+
+    # Normalize state label
+    case "$status" in
+        *Charging*)    state="+++" ;;
+        *Discharging*) state="Remaining" ;;
+        *Full*)        state="Full" ;;
+        *)             state="$status" ;;
+    esac
+
+    [ -z "$time" ] && time="--:--"
+
+    printf "^c$black^ ^b$red^ "
+    printf "^c$white^ ^b$grey^ Battery: %s %s %s" "$percent" "($state)" "$time ^b$black^"
 }
 
 brightness() {
@@ -74,5 +94,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$updates $(weather) $(keymap) $(cpu) $(battery) $(mem) $(wlan) $(clock)"
+  sleep 1 && xsetroot -name "$updates $(weather) $(keymap) $(cpu)% $(bat) $(mem) $(wlan) $(clock)"
 done
