@@ -11,8 +11,8 @@ interval=0
 cpu() {
   #cpu_val=$(grep -o "^[^ ]*" /proc/loadavg) # load average
   cpu_val=$(top -bn1 | grep 'Cpu(s)' | awk '{ print 100-$8"%"}') # %
-  printf "^b$black^ ^c$green^ "
-  printf "^c$white^ ^b$grey^ $cpu_val ^b$black^"
+  printf "^c$green^ ^b$grey^  "
+  printf "^c$blue^ ^b$grey^ $cpu_val ^b$black^"
 }
 
 pkg_updates() {
@@ -29,15 +29,15 @@ pkg_updates() {
 
 weather() {
   val="$(curl wttr.in/?format=1 | awk '{ print $2 }')"
-  printf "^b$black^ ^c$white^ "
-  printf "^c$white^ ^b$grey^ $val $val2 ^b$black^"
+  printf "^b$black^ ^c$white^  "
+  printf "^c$blue^ ^b$grey^ $val $val2 ^b$black^"
 } 
 
 keymap() {
   val="$(setxkbmap -query | awk '/^layout/ { print $2 $3 }' | sed s/i//g)"
   val2="$(setxkbmap -query | awk '/^variant/ { print $2 $3 }' | sed s/i//g)"
   printf "^b$black^ ^c$white^ "
-  printf "^c$white^ ^b$grey^ $val $val2 ^b$black^"
+  printf "^c$blue^ ^b$grey^ $val $val2 ^b$black^"
 }
 
 bat() {
@@ -63,8 +63,8 @@ bat() {
 
     [ -z "$time" ] && time="--:--"
 
-    printf "^b$black^ ^c$red^ "
-    printf "^c$white^ ^b$grey^ Battery: %s %s %s" "$percent" "($state)" "$time ^b$black^"
+    printf "^b$black^ ^c$green^  "
+    printf "^c$blue^ ^b$grey^ %s %s %s" "$percent" "($state)" "$time ^b$black^"
 }
 
 brightness() {
@@ -73,13 +73,13 @@ brightness() {
 }
 
 mem() {
-  printf "^b$black^ ^c$green^ "
-  printf "^c$white^ ^b$grey^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+  printf "^b$black^ ^c$green^  "
+  printf "^c$blue^ ^b$grey^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^b$black^ ^c$darkblue^ 󰤨 ^d^%s" " ^c$darkblue^Connected" ;;
+	up) printf "^b$black^ ^c$green^ 󰤨 ^d^%s" " ^c$green^Connected" ;;
 	down) printf "^b$black^ ^c$red^ 󰤭 ^d^%s" " ^c$red^Disconnected" ;;
 	esac
 }
