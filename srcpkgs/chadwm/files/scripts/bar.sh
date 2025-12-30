@@ -11,7 +11,7 @@ interval=0
 cpu() {
   #cpu_val=$(grep -o "^[^ ]*" /proc/loadavg) # load average
   cpu_val=$(top -bn1 | grep 'Cpu(s)' | awk '{ print 100-$8"%"}') # %
-  printf "^c$black^ ^b$green^ "
+  printf "^b$black^ ^c$green^ "
   printf "^c$white^ ^b$grey^ $cpu_val ^b$black^"
 }
 
@@ -23,20 +23,20 @@ pkg_updates() {
   if [ -z "$updates" ]; then
     printf "  ^c$green^    Fully Updated"
   else
-    printf "  ^c$white^    $updates"" updates"
+    printf "  ^c$blue^ ^b$grey^   $updates"" updates"
   fi
 }
 
 weather() {
   val="$(curl wttr.in/?format=1 | awk '{ print $2 }')"
-  printf "^c$black^ ^b$white^ "
+  printf "^b$black^ ^c$white^ "
   printf "^c$white^ ^b$grey^ $val $val2 ^b$black^"
 } 
 
 keymap() {
   val="$(setxkbmap -query | awk '/^layout/ { print $2 $3 }' | sed s/i//g)"
   val2="$(setxkbmap -query | awk '/^variant/ { print $2 $3 }' | sed s/i//g)"
-  printf "^c$black^ ^b$white^ "
+  printf "^b$black^ ^c$white^ "
   printf "^c$white^ ^b$grey^ $val $val2 ^b$black^"
 }
 
@@ -63,7 +63,7 @@ bat() {
 
     [ -z "$time" ] && time="--:--"
 
-    printf "^c$black^ ^b$red^ "
+    printf "^b$black^ ^c$red^ "
     printf "^c$white^ ^b$grey^ Battery: %s %s %s" "$percent" "($state)" "$time ^b$black^"
 }
 
@@ -73,20 +73,20 @@ brightness() {
 }
 
 mem() {
-  printf "^c$black^ ^b$darkblue^ "
+  printf "^b$black^ ^c$green^ "
   printf "^c$white^ ^b$grey^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$black^ ^b$blue^ 󰤨 ^d^%s" " ^c$blue^Connected" ;;
-	down) printf "^c$black^ ^b$blue^ 󰤭 ^d^%s" " ^c$blue^Disconnected" ;;
+	up) printf "^b$black^ ^c$darkblue^ 󰤨 ^d^%s" " ^c$darkblue^Connected" ;;
+	down) printf "^b$black^ ^c$red^ 󰤭 ^d^%s" " ^c$red^Disconnected" ;;
 	esac
 }
 
 clock() {
 	printf "^c$black^ ^b$darkblue^ 󱑆 "
-	printf "^c$black^^b$blue^ $(date '+%H:%M')  "
+	printf "^c$black^^b$blue^ $(date '+%H:%M') "
 }
 
 while true; do
@@ -94,5 +94,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$updates $(weather) $(keymap) $(cpu)% $(bat) $(mem) $(wlan) $(clock)"
+  sleep 1 && xsetroot -name "$updates $(keymap) $(weather) $(cpu)% $(mem) $(bat) $(wlan) $(clock)"
 done
