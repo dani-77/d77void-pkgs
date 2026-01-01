@@ -39,7 +39,7 @@ module.4.enabled    : true
 module.4.interval   : 5
 
 module.5.name	    : wlan
-module.5.cmd	    : echo WI-Fi: && cat /sys/class/net/wl*/operstate 2>/dev/null
+module.5.cmd	    : echo Wi-Fi: && cat /sys/class/net/wl*/operstate 2>/dev/null
 module.5.enabled    : true
 module.5.interval   : 30
 
