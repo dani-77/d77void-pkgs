@@ -1,6 +1,6 @@
 # Template file for 'wmd77'
 pkgname=wmd77
-version=0.2.0
+version=0.3.0
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -12,14 +12,14 @@ build_style=cargo
 #make_dirs="/var/log/dir 0755 root root"
 hostmakedepends="pkg-config libXft-devel libX11-devel"
 #makedepends=""
-depends="libX11 libXft"
+depends="dmenu libX11 libXft st"
 short_desc="wmd77 is a Penrose Lib Tiling Window Manager"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="MIT"
 homepage="https://github.com/dani-77/wmd77"
 #changelog=""
 distfiles=""https://github.com/dani-77/${pkgname}/archive/refs/tags/${version}.tar.gz
-checksum=5819cfde20dd0dcb2db2a7775aadc8d524ca33943659d4703465b6eee369c06f
+checksum=a65221ca5c1b9d8407395c3aacd4621f59b82e59332194f998034b28d7d39da5
 repository=d77
 
 do_build() {
