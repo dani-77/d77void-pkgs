@@ -1,6 +1,6 @@
 # Template file for 'fresh-editor'
 pkgname=fresh-editor
-version=0.1.69
+version=0.1.71
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -19,11 +19,12 @@ license="GPL-3.0-or-later"
 homepage="https://sinelaw.github.io/fresh/"
 changelog="https://github.com/sinelaw/fresh/releases/tag/v${version}"
 distfiles="https://github.com/sinelaw/fresh/releases/download/v${version}/fresh-editor-x86_64-unknown-linux-gnu.tar.xz"
-checksum=d71b154b8ab725cf2d947f30c7c0d0d374ecd6a62aaed8aa7ef4121cb347cd74
+checksum=e778a54219ae732f4950a3b82f81c191593541e53ac132eff9f1df95b6ad49a2
 repository=d77
 
 do_install() {
     vextract fresh-editor*
+    vmkdir /usr/share/applications
     vmkdir /usr/share/doc/fresh-editor
     vmkdir /usr/share/fresh-editor
     vmkdir /usr/bin
@@ -32,5 +33,6 @@ do_install() {
     vinstall README.md 644 /usr/share/doc/fresh-editor/
     vlicense LICENSE /usr/share/licenses/fresh-editor/
     vcopy plugins/'*' /usr/share/fresh-editor/
+    vcopy ${FILESDIR}/fresh-editor.desktop /usr/share/applications/
 }
 
