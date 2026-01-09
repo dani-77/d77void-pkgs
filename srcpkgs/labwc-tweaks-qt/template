@@ -1,6 +1,6 @@
 # Template file for 'labwc-tweaks-qt'
 pkgname=labwc-tweaks-qt
-version=20250704
+version=20260109
 revision=1
 build_style=cmake
 configure_args="
@@ -16,5 +16,5 @@ license="GPL-3.0-or-later"
 homepage="https://labwc.github.io"
 changelog="https://github.com/dani-77/labwc-tweaks/releases/tag/${version}"
 distfiles="https://github.com/dani-77/labwc-tweaks/archive/refs/tags/${version}.tar.gz"
-checksum=060954456afe2716213948f46792a7b205ce72c143ce98cf1ed337508abfd938
+checksum=fc5ef1ad2d280a8516bd174ed00ecc13f9e4d8ffa087247e1936f3c69a7fff3e
 repository=d77
