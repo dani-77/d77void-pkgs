@@ -11,7 +11,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
 homepage="https://dri.freedesktop.org/"
 distfiles="https://gitlab.freedesktop.org/mesa/drm/-/archive/libdrm-${version}/drm-libdrm-${version}.tar.gz"
-checksum=49c077f3938147e7c321fe89255eb189c1be68f6ed0aa36e29d38e3db0e84e08
+checksum=543544aeadf0c8bea920d00f75e5dc2ff2ac3702e034651a11db40d3ec38becf
 
 case "$XBPS_TARGET_MACHINE" in
 	aarch64*) configure_args+=" -Dvc4=enabled";;
