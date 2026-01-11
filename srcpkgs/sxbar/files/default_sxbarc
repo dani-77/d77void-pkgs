@@ -6,9 +6,9 @@ horizontal_padding  : 0
 text_padding        : 0
 border              : false
 border_width        : 0
-background_colour   : #000000
+background_colour   : #171717
 foreground_colour   : #7abccd
-border_colour       : #005577
+border_colour       : #717394
 font                : iosevka
 font_size           : 14
 
@@ -39,7 +39,7 @@ module.4.enabled    : true
 module.4.interval   : 5
 
 module.5.name	    : wlan
-module.5.cmd	    : echo Wi-Fi: && cat /sys/class/net/wl*/operstate 2>/dev/null
+module.5.cmd	    : echo WI-Fi: && cat /sys/class/net/wl*/operstate 2>/dev/null
 module.5.enabled    : true
 module.5.interval   : 30
 
@@ -67,3 +67,13 @@ module.10.name       : date
 module.10.cmd        : date '+%Y-%m-%d'
 module.10.enabled    : true
 module.10.interval   : 60
+
+workspaces.labels              : one two three four five six seven eight nine
+workspaces.active_background   : #717394
+workspaces.active_foreground   : #7abccd
+workspaces.inactive_background : #171717
+workspaces.inactive_foreground : #7abccd
+workspaces.padding_left        : 10
+workspaces.padding_right       : 10
+workspaces.spacing             : 0
+workspaces.position            : left
