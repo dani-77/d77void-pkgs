@@ -458,7 +458,19 @@ fn register_bar_module(
             Some(Value::String(lua.create_string(&date_format)?)),
         )
     })?;
-
+    let wifi = lua.create_function(|lua, config: Table| {
+    let interface: Option<String> = config.get("interface").unwrap_or(None);
+    
+    let interface_table = lua.create_table()?;
+    interface_table.set("interface", interface)?;
+    
+    create_block_config(
+        lua,
+        config,
+        "Wifi",
+        Some(Value::Table(interface_table)),
+    )
+})?;
     let shell = lua.create_function(|lua, config: Table| {
         let command: String = config.get("command").map_err(|_| {
             mlua::Error::RuntimeError("oxwm.bar.block.shell: 'command' field is required".into())
@@ -509,6 +521,7 @@ fn register_bar_module(
     block_table.set("cpu", cpu)?;
     block_table.set("datetime", datetime)?;
     block_table.set("shell", shell)?;
+    block_table.set("wifi", wifi)?;
     block_table.set("static", static_block)?;
     block_table.set("battery", battery)?;
 
@@ -626,6 +639,20 @@ fn register_bar_module(
                         .unwrap_or_default();
                     BlockCommand::Static(text)
                 }
+		"Wifi" => {  // ADICIONAR ESTE CASE COMPLETO
+                let interface = arg
+                    .and_then(|v| {
+                        if let Value::Table(t) = v {
+                            t.get("interface").ok()
+                        } else {
+                            None
+                        }
+                    });
+
+                BlockCommand::Wifi {
+                    interface,
+                }
+            }
                 "Battery" => {
                     let formats = arg
                         .and_then(|v| {

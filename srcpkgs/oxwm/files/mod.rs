@@ -6,12 +6,14 @@ mod cpu;
 mod datetime;
 mod ram;
 mod shell;
+mod wifi;
 
 use battery::Battery;
 use cpu::Cpu;
 use datetime::DateTime;
 use ram::Ram;
 use shell::ShellBlock;
+use wifi::Wifi;
 
 pub trait Block {
     fn content(&mut self) -> Result<String, BlockError>;
@@ -39,6 +41,9 @@ pub enum BlockCommand {
         battery_name: Option<String>,
     },
     Ram,
+    Wifi {
+	interface: Option<String>,
+},
     Cpu,
     Static(String),
 }
@@ -73,7 +78,13 @@ impl BlockConfig {
             )),
             BlockCommand::Ram => Box::new(Ram::new(&self.format, self.interval_secs, self.color)),
 	    BlockCommand::Cpu => Box::new(Cpu::new(&self.format, self.interval_secs, self.color)),
-            BlockCommand::Static(text) => Box::new(StaticBlock::new(
+	    BlockCommand::Wifi { interface } => Box::new(Wifi::new(
+                &self.format,
+                self.interval_secs,
+                self.color,
+                interface.clone(),
+            )),
+	    BlockCommand::Static(text) => Box::new(StaticBlock::new(
                 &format!("{}{}", self.format, text),
                 self.color,
             )),
