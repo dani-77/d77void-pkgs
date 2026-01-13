@@ -27,18 +27,22 @@ fn detect_battery_name() -> Option<String> {
             .map(|s| s.trim() == "Battery")
             .unwrap_or(false);
 
-        // Some systems omit "present"; treat missing as present.
         let is_present = fs::read_to_string(&present_path)
             .map(|s| s.trim() == "1")
             .unwrap_or(true);
 
-        if is_battery && is_present {
-            if let Some(name) = path.file_name().and_then(|n| n.to_str()) {
-                return Some(name.to_string());
-            }
+        let is_device_scope = fs::read_to_string(path.join("scope"))
+            .map(|s| s.trim().eq_ignore_ascii_case("device"))
+            .unwrap_or(false);
+
+        if !is_battery || !is_present || is_device_scope {
+            continue;
+        }
+
+        if let Some(name) = path.file_name().and_then(|n| n.to_str()) {
+            return Some(name.to_string());
         }
     }
-
     None
 }
 
