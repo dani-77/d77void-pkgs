@@ -1,7 +1,7 @@
 # Template file for 'mangowc'
 pkgname=mangowc
-version=0.10.10
-revision=2
+version=0.11.0
+revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style=meson
@@ -19,7 +19,7 @@ license="GPL-3.0-or-later"
 homepage="https://mangowc.vercel.app/"
 #changelog=""
 distfiles="https://github.com/DreamMaoMao/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum=34c63ee8d7b6fa7404f21cbfcfd10141821aab216d3217a6de5eeac8f5a537c0
+checksum=1b1422dd73564302800720cc49aeb854e0a849696b822ba54b8f49dd63d32949
 repository=d77
 nopie=yes
 
