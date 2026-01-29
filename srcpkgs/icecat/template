@@ -1,0 +1,39 @@
+# Template file for 'icecat'
+pkgname=icecat
+version=140.3.1
+revision=1
+#archs="i686 x86_64"
+#build_wrksrc=
+build_style="fetch"
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="bsdtar tar xz"
+#makedepends=""
+#depends=""
+short_desc="GNU version of the Firefox browser."
+maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
+license="GPL-3.0-or-later"
+homepage="https://icecatbrowser.org"
+#changelog=""
+distfiles="https://icecatbrowser.org/assets/${pkgname}/${version}/${pkgname}_${version}esr-1_amd64.deb"
+checksum=1358c36460cebbfff44d9d62d15f76211715a15696f2ece317330efd9e629a81
+repository=d77
+
+do_install() {
+	ar x icecat_${version}esr-1_amd64.deb
+	bsdtar -xf data.tar.zst
+	cp -r usr/local/* usr/
+	rm *.tar.zst
+	rm debian-binary
+	rm icecat*.deb
+	rm -rf usr/local
+	vmkdir /usr/bin
+	vcopy '*' /
+}
+
+post_install() {
+	cp ${DESTDIR}/usr/lib/icecat/icecat /usr/bin/
+}
