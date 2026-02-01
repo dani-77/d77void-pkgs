@@ -1,7 +1,7 @@
 # Template file for 'dwm_icon'
 pkgname=dwm
-version=6.7
-revision=77_1
+version=6.8
+revision=77
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style="gnu-makefile"
@@ -19,7 +19,7 @@ license="MIT"
 homepage="https://suckless.org"
 #changelog="https://github.com/dani-77/dwm/releases/tag/dwm-${version}"
 distfiles="https://dl.suckless.org/$pkgname/$pkgname-$version.tar.gz"
-checksum=91ffbaa148bf63e965b21eb94597edbba53431c19f5061874e04ef3c58c1f192
+checksum=bcf540589ad174d4073f4efa658828411e2f5ba63196cfaf6b71363700f590b7
 repository=d77
 
 do_build() {
