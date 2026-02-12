@@ -19,5 +19,5 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/noctalia-dev/noctalia-cli"
 changelog="https://github.com/noctalia-dev/noctalia-cli/releases/tag/v0.4.0"
 distfiles="https://github.com/noctalia-dev/${pkgname}/archive/refs/tags/v${version}.tar.gz"
-checksum=f6106514b420e3d2567b9fc1549ff41b4690c81bb471a684126da111ad597185
+checksum=0eec6e6949c0d2434a029a432806f07a41c678ea73418f5e205ee14b09fef9b5
 repository=d77
