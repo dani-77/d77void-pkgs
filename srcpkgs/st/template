@@ -1,7 +1,7 @@
 # Template file for 'st'
 pkgname=st
 version=0.9.3
-revision=77
+revision=77_1
 #archs="i686 x86_64"
 #build_wrksrc=
 build_style=gnu-makefile
@@ -24,7 +24,6 @@ repository=d77
 
 pre_build() {
 	mkdir -p ${DESTDIR}/usr/share/terminfo
-	sed -i 's|Liberation Mono|Hack|' config.def.h
 }
 
 pre_install() {
