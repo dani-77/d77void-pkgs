@@ -24,6 +24,7 @@ repository=d77
 
 pre_build() {
 	mkdir -p ${DESTDIR}/usr/share/terminfo
+	sed -i 's|Liberation Mono|Hack|' config.def.h
 }
 
 pre_install() {
