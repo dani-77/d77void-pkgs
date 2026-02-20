@@ -1,6 +1,6 @@
 # Template file for 'dankmaterial-shell'
 pkgname=dankmaterial-shell
-version=1.4.0
+version=1.4.1
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -19,7 +19,7 @@ license="MIT"
 homepage="https://github.com/AvengeMedia/DankMaterialShell"
 changelog="https://github.com/AvengeMedia/DankMaterialShell/releases/tag/v{version}"
 distfiles="https://github.com/AvengeMedia/DankMaterialShell/releases/download/v${version}/dms-full-amd64.tar.gz"
-checksum=e02dcf1f009369c16e9875a57fd34b7f8cca3c884aa04ec6beedf09b99857d73
+checksum=530fd81064f3c8d6930930647cb4d0c704ea752f8b2a882d17f857adbf3407d7
 repository=d77
 
 do_install() {
