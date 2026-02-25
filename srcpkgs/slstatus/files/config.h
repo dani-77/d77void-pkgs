@@ -13,11 +13,11 @@ static const char unknown_str[] = "n/a";
  * function            description                     argument (example)
  *
  * battery_perc        battery percentage              battery name (BAT0)
- *                                                     NULL on OpenBSD
+ *                                                     NULL on OpenBSD/FreeBSD
  * battery_state       battery charging state          battery name (BAT0)
- *                                                     NULL on OpenBSD
+ *                                                     NULL on OpenBSD/FreeBSD
  * battery_remaining   battery remaining HH:MM         battery name (BAT0)
- *                                                     NULL on OpenBSD
+ *                                                     NULL on OpenBSD/FreeBSD
  * cpu_perc            cpu usage in percent            NULL
  * cpu_freq            cpu frequency in MHz            NULL
  * datetime            date and time                   format string (%F %T)
@@ -52,6 +52,8 @@ static const char unknown_str[] = "n/a";
  * temp                temperature in degree celsius   sensor file
  *                                                     (/sys/class/thermal/...)
  *                                                     NULL on OpenBSD
+ *                                                     thermal zone on FreeBSD
+ *                                                     (tz0, tz1, etc.)
  * uid                 UID of current user             NULL
  * uptime              system uptime                   NULL
  * username            username of current user        NULL
@@ -61,5 +63,16 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
+	//{ wifi_essid, "[  on %s"   , "wls3" },/
+	//{ wifi_perc, " %s%%]" , "wls3"},/
+	{ hostname, "[ %s]", NULL },
+	{ cpu_perc, "[ %s%%]", NULL },
+	{ ram_perc, "[ %s%%]", NULL },
+	{ keymap, "[ %s",  NULL },
+	{ keyboard_indicators, " %s]", "(c?/n?)" },
+	//{ battery_perc, "[ %s%%", "BAT0" },/
+	//{ battery_state, " %s",	"BAT0" },/
+	//{ battery_remaining, " %s]", "BAT0" },/
+	//{ datetime, "%s", "%a %b %d %r" },/
+	{ datetime, "[ %s]", "%A, %d/%B/%Y -  %T" },
 };
