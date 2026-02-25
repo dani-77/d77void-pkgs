@@ -1,6 +1,6 @@
 # Template file for 'bluedevil'
 pkgname=bluedevil
-version=6.5.5
+version=6.6.1
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -18,4 +18,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/bluedevil"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=d2b34bcd0442ef4c687fd51cd06cb644fafdcd37dc5e4624d6584ccdbe59cdb6
+checksum=c160707d26bfe7c6661fa593d74f7a580417782c364cec4e14ca0bc4f542fe1b

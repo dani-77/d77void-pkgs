@@ -1,6 +1,6 @@
 # Template file for 'kwayland-integration'
 pkgname=kwayland-integration
-version=6.5.5
+version=6.6.1
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -14,4 +14,4 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/kwayland-integration"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=5b470a82d1dfc89e193e0fd33500895d6d2440e7800a9261ad0b6c12de629012
+checksum=b735645feb28fbc8d5f527046a90499e70a1b031aeb1a5be4c55a91975fc7f75

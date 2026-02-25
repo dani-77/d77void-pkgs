@@ -7,7 +7,7 @@ build_style=cmake
 _llvmver=21
 configure_args="-DBUILD_TESTS=OFF -DFORCE_LIMITED_API=no -DNO_QT_TOOLS=yes
  -DNUMPY_INCLUDE_DIR=/${py3_sitelib}/numpy/_core/include
- -DPYTHON_EXECUTABLE=/usr/bin/python3 -Wno-dev
+ -DPYTHON_EXECUTABLE=/usr/bin/python3
  -DClang_DIR=${XBPS_CROSS_BASE}/usr/lib/llvm/${_llvmver}/lib/cmake/clang"
 hostmakedepends="python3-numpy python3-setuptools qt6-base"
 makedepends="libedit-devel libxslt-devel llvm${_llvmver}-devel clang${_llvmver}-devel
