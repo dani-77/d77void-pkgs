@@ -1,6 +1,6 @@
 # Template file for 'brave-bin'
 pkgname=brave-bin
-version=1.86.146
+version=1.87.191
 revision=1
 archs="x86_64"
 build_style="fetch"
@@ -10,7 +10,7 @@ hostmakedepends="tar xz"
 license="MPL-2.0"
 homepage="https://brave.com"
 distfiles="https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser_${version}_amd64.deb"
-checksum=4fcfd8bf98e7e056bbf5e0e3d08144f4ff456c249fec7d95fd463d4bf8b70b77
+checksum=a7681d2b39346136587224af9693b4437d70f3f78d384d569a1bd69b4a68a752
 repository=d77
 
 do_install() {
