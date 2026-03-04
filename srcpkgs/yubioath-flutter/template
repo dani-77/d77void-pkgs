@@ -1,6 +1,6 @@
 # Template file for 'yubioath-flutter'
 pkgname=yubioath-flutter
-version=7.3.0
+version=7.3.2
 revision=2
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -18,13 +18,13 @@ maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://developers.yubico.com/yubioath-flutter/"
 changelog="https://github.com/Yubico/${pkgname}/releases/tag/${version}"
-distfiles="https://developers.yubico.com/${pkgname}/Releases/yubico-authenticator-latest-linux.tar.gz"
-checksum=a82aa86a60f16d2d6bb07789f33d3256e12b7d2f231a0d6625dea1706c4069e1
+distfiles="https://github.com/Yubico/${pkgname}/releases/download/${version}/yubico-authenticator-${version}-linux.tar.gz"
+checksum=586fae119bd05ccd35e2d6f733f52b0ea39038e7f49b464fcd52703af0895b15
 nopie=yes
 repository=d77
 
 do_build() {
-	vextract yubico-authenticator-latest-linux.tar.gz
+	vextract yubico-authenticator-${version}-linux.tar.gz
 	sed -i 's|@EXEC_PATH/authenticator|/opt/yubioath-flutter/authenticator|' linux_support/com.yubico.yubioath.desktop
 	sed -i 's|@EXEC_PATH/linux_support/com.yubico.yubioath.png|/opt/yubioath-flutter/linux_support/com.yubico.yubioath.png|' linux_support/com.yubico.yubioath.desktop
 	vmkdir /usr/share/applications
@@ -32,7 +32,7 @@ do_build() {
 }	
 
 do_install() {
-	rm yubico-authenticator-latest-linux.tar.gz
+	rm yubico-authenticator-${version}-linux.tar.gz
 	vmkdir /opt/yubioath-flutter
 	vcopy '*' /opt/yubioath-flutter/
 }
