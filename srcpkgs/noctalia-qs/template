@@ -3,7 +3,7 @@ pkgname=noctalia-qs
 version=0.0.8
 revision=1
 build_style=cmake
-configure_args="-DCMAKE_BUILD_TYPE=Release -DDISTRIBUTOR=Void -DDISTRIBUTOR_DEBUGINFO_AVAILABLE=YES -DINSTALL_QML_PREFIX=lib/qt6/qml -DCRASH_REPORTER=OFF"
+configure_args="-DDISTRIBUTOR=Void -DDISTRIBUTOR_DEBUGINFO_AVAILABLE=YES -DINSTALL_QML_PREFIX=lib/qt6/qml -DCRASH_REPORTER=OFF"
 hostmakedepends="pkg-config polkit-devel wayland-devel qt6-base-devel qt6-declarative-devel qt6-shadertools-devel"
 makedepends="cli11 qt6-base-private-devel qt6-declarative-private-devel qt6-shadertools-devel pipewire-devel jemalloc-devel pam-devel"
 depends="qt6-svg qt6-wayland"

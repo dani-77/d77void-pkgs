@@ -1,6 +1,6 @@
 # Template file for 'noctalia-shell'
 pkgname=noctalia-shell
-version=4.5.0
+version=4.6.7
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -12,14 +12,14 @@ build_style="fetch"
 #make_dirs="/var/log/dir 0755 root root"
 hostmakedepends="tar"
 #makedepends=""
-depends="quickshell ImageMagick brightnessctl gpu-screen-recorder ffmpeg qt6-multimedia cliphist matugen cava wlsunset power-profiles-daemon ddcutil"
+depends="noctalia-qs ImageMagick brightnessctl gpu-screen-recorder ffmpeg qt6-multimedia cliphist matugen cava wlsunset power-profiles-daemon ddcutil"
 short_desc="A sleek and minimal desktop shell thoughtfully crafted for Wayland, built with Quickshell."
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/noctalia-dev/noctalia-shell"
 changelog="https://github.com/noctalia-dev/${pkgname}/releases/tag/v${version}"
 distfiles="https://github.com/noctalia-dev/${pkgname}/releases/download/v${version}/noctalia-v${version}.tar.gz"
-checksum=1f2565502f0ccb19a9de38d29afc4a79472ba5fa97cce448ab7767a19eddf51a
+checksum=8cbb33ea759ed69e22bd94485ca89ed62b4b9ecc4ddccb7a88daceb0873e60a7
 repository=d77
 
 do_install() {
