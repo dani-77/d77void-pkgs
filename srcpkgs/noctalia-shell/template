@@ -1,6 +1,6 @@
 # Template file for 'noctalia-shell'
 pkgname=noctalia-shell
-version=4.6.7
+version=4.7.0
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -19,7 +19,7 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/noctalia-dev/noctalia-shell"
 changelog="https://github.com/noctalia-dev/${pkgname}/releases/tag/v${version}"
 distfiles="https://github.com/noctalia-dev/${pkgname}/releases/download/v${version}/noctalia-v${version}.tar.gz"
-checksum=8cbb33ea759ed69e22bd94485ca89ed62b4b9ecc4ddccb7a88daceb0873e60a7
+checksum=ee324bebb95a1cd192150b031ad0f8ba153d7df5559fc1e7e9913b6f49c96318
 repository=d77
 
 do_install() {
