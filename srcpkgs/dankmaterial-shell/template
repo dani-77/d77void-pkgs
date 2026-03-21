@@ -1,6 +1,6 @@
 # Template file for 'dankmaterial-shell'
 pkgname=dankmaterial-shell
-version=1.4.3
+version=1.4.4
 revision=1
 #archs="i686 x86_64"
 #build_wrksrc=
@@ -12,14 +12,14 @@ build_style="fetch"
 #make_dirs="/var/log/dir 0755 root root"
 #hostmakedepends="go"
 #makedepends=""
-depends="quickshell dgop accountsservice cava cliphist i2c-tools matugen qt6-multimedia power-profiles-daemon"
+depends="quickshell accountsservice cava cliphist i2c-tools qt6-multimedia power-profiles-daemon"
 short_desc="Desktop shell for wayland compositors built with Quickshell & GO"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="MIT"
 homepage="https://github.com/AvengeMedia/DankMaterialShell"
 changelog="https://github.com/AvengeMedia/DankMaterialShell/releases/tag/v{version}"
 distfiles="https://github.com/AvengeMedia/DankMaterialShell/releases/download/v${version}/dms-full-amd64.tar.gz"
-checksum=0bba5989f64a659225a8a0c6b3b8bd08e0838f48e5790d91f7b6f1362f784fce
+checksum=c20dbdcff2470031acf8abdde59a941f2d459cc05cab360a6fc7a405d0e3c023
 repository=d77
 
 do_install() {
