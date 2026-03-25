@@ -105,6 +105,7 @@ libbluetooth.so.3 libbluetooth-4.58_1
 libwmf-0.2.so.7 libwmf-0.2.8.4_1
 libwmflite-0.2.so.7 libwmf-0.2.8.4_1
 libgthread-2.0.so.0 glib-2.86.0_1
+libguestfs.so.0 libguestfs-1.58.1_1
 libglib-2.0.so.0 glib-2.86.0_1
 libgmodule-2.0.so.0 glib-2.86.0_1
 libgio-2.0.so.0 glib-2.86.0_1
@@ -939,14 +940,17 @@ libuchardet.so.0 uchardet-0.0.6_1
 libgtksourceviewmm-3.0.so.0 gtksourceviewmm-3.2.0_1
 libyajl.so.2 yajl-2.0.1_1
 libconfuse.so.2 confuse-3.2.1_1
+liblldb.so.22.1 liblldb22-22.1.1_1
 liblldb.so.21.1 liblldb21-21.1.4_1
 liblldb.so.19.1 liblldb19-19.1.0_1
 liblldb.so.18.1 liblldb18-18.1.8_1
 liblldb.so.17 liblldb17-17.0.6_3
+libclang.so.22.1 libclang22-22.1.1_1
 libclang.so.21.1 libclang21-21.1.4_1
 libclang.so.19.1 libclang19-19.1.0_1
 libclang.so.18.1 libclang18-18.1.8_1
 libclang.so.17 libclang17-17.0.6_1
+libclang-cpp.so.22.1 libclang-cpp22-22.1.1_1
 libclang-cpp.so.21.1 libclang-cpp21-21.1.4_1
 libclang-cpp.so.19.1 libclang-cpp19-19.1.0_1
 libclang-cpp.so.18.1 libclang-cpp18-18.1.8_1
@@ -955,6 +959,7 @@ libLLVM-17.so libllvm17-17.0.6_1
 libLLVM.so.18.1 libllvm18-18.1.8_1
 libLLVM.so.19.1 libllvm19-19.1.0_1
 libLLVM.so.21.1 libllvm21-21.1.4_1
+libLLVM.so.22.1 libllvm22-22.1.1_1
 libLLVMSPIRVLib.so.18.1 SPIRV-LLVM-Translator-18.1.2_1
 libLLVMSPIRVLib.so.19.1 SPIRV-LLVM-Translator19-19.1.1_1
 libLLVMSPIRVLib.so.21.1 SPIRV-LLVM-Translator21-21.1.1_1
@@ -2556,6 +2561,7 @@ libanthy-unicode.so.0 libanthy-unicode-1.0.0.20201109_1
 libanthydic-unicode.so.0 libanthy-unicode-1.0.0.20201109_1
 libanthyinput-unicode.so.0 libanthy-unicode-1.0.0.20201109_1
 libanthygobject-1.0.so.5 ibus-anthy-1.5.6_1
+libirml.so.1 tbb-2022.3.0_1
 libtbbmalloc_proxy.so.2 tbb-4.3_1
 libtbbmalloc.so.2 tbb-4.3_1
 libtbb.so.12 tbb-2021.11.0_1
