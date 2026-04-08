@@ -1,7 +1,5 @@
 [Desktop Entry]
 Name=oxwm
-Comment=DWM but better with sane defaults
-Exec=dbus-launch oxwm
+Comment=WM written in Rust
+Exec=/usr/bin/oxwm
 Type=Application
-Keywords=wm;windowmanager;window;manager;
-Version=0.9.0
