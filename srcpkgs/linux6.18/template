@@ -1,6 +1,6 @@
 # Template file for 'linux6.18'
 pkgname=linux6.18
-version=6.18.27
+version=6.18.28
 revision=1
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Duncaen <duncaen@voidlinux.org>"
@@ -18,7 +18,7 @@ rc*) distfiles="https://git.kernel.org/torvalds/t/linux-${version%.*}-${version#
 esac
 
 checksum="9106a4605da9e31ff17659d958782b815f9591ab308d03b0ee21aad6c7dced4b
- 1d74406decf73fd0fb365b0e807fec8bc1e1d464e17f59438779f49da189cfae"
+ 335094a107cfee7c546a036f724c95a251745802cdab3b503c5cf878c7ee5539"
 
 python_version=3
 
