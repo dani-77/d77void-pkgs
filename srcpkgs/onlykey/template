@@ -2,21 +2,17 @@
 pkgname=onlykey
 version=5.5.0
 revision=1
-build_style="fetch"
-hostmakedepends="tar xz"
 short_desc="OnlyKey App"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="GPL-3.0-or-later"
 homepage="https://crp.to"
-distfiles="https://github.com/trustcrypto/OnlyKey-App/releases/download/v5.5.0/OnlyKey_5.5.0_amd64.deb"
+distfiles="https://github.com/trustcrypto/OnlyKey-App/releases/download/v${version}/OnlyKey_${version}_amd64.deb"
 checksum=f00f056a3432d624a805596a6c6b0f2ce5d8efa8c95da1baac39599946301065
 repository=d77
 
 do_install() {
-	vextract OnlyKey_5.5.0_amd64.deb
 	vmkdir /opt/OnlyKey
-	vmkdir /usr/lib/udev/rules.d
-	vcopy etc/udev/rules.d/49-onlykey.rules /usr/lib/udev/rules.d/
+	vinstall etc/udev/rules.d/49-onlykey.rules 644 /usr/lib/udev/rules.d/
 	vcopy opt/'*' /opt/
 	vcopy usr/'*' /usr/
 }

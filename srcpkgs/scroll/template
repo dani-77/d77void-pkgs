@@ -2,7 +2,6 @@
 pkgname=scroll
 version=1.12.15
 revision=1
-archs="x86_64"
 build_style=meson
 configure_args="-Dwerror=false -Db_ndebug=false"
 conf_files="/etc/scroll/config"
@@ -25,4 +24,3 @@ pre_install() {
 post_install() {
 	vlicense LICENSE
 }
-
