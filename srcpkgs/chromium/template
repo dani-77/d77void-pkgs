@@ -1,7 +1,7 @@
 # Template file for 'chromium'
 pkgname=chromium
 # See https://chromiumdash.appspot.com/releases?platform=Linux for the latest version
-version=150.0.7871.46
+version=150.0.7871.128
 revision=1
 _rollup=4.22.4
 archs="i686* x86_64* aarch64* armv7l*"
@@ -36,7 +36,7 @@ homepage="https://www.chromium.org/"
 # distfiles="https://chromium.googlesource.com/chromium/src.git/+archive/refs/tags/${version}.tar.gz"
 distfiles="https://github.com/chromium-linux-tarballs/chromium-tarballs/releases/download/${version}/chromium-${version}-linux.tar.xz
  https://registry.npmjs.org/@rollup/wasm-node/-/wasm-node-${_rollup}.tgz"
-checksum="81c9263d5cf3d6a4ddd1c86c10242dc0104194ad5bc63aa631597cd9a32b7724
+checksum="89b8e3851d9c409f9ff65cfbae1962f2cb323d70bd8e809910fe269d84b2f227
  ee49bf67bd9bee869405af78162d028e2af0fcfca80497404f56b1b99f272717"
 
 skip_extraction="wasm-node-${_rollup}.tgz"

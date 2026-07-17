@@ -1,6 +1,6 @@
 # Template file for 'terraform'
 pkgname=terraform
-version=1.15.7
+version=1.15.8
 revision=1
 build_style=go
 go_import_path="github.com/hashicorp/$pkgname"
@@ -10,5 +10,5 @@ maintainer="Andrea Brancaleoni <abc@pompel.me>"
 license="BUSL-1.1"
 homepage="https://www.terraform.io/"
 distfiles="https://$go_import_path/archive/v$version.tar.gz"
-checksum=1b2904281ec8746a1ba2fa9ebeadbcb1f73d306cc31cdef2f08857f9d2f7f3b1
+checksum=7dcc43701dc10c2dfdd3704eb5c910337c858e2565417a7fe15430508938c2c0
 repository=nonfree
