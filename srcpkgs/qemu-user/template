@@ -1,7 +1,7 @@
 # Template file for 'qemu-user'
 # This package should be updated together with qemu
 pkgname=qemu-user
-version=11.0.1
+version=11.0.2
 revision=1
 archs="~i686* ~arm*"
 build_style=configure
@@ -18,7 +18,7 @@ maintainer="classabbyamp <void@placeviolette.net>"
 license="GPL-2.0-only, LGPL-2.1-only"
 homepage="https://www.qemu.org"
 distfiles="https://wiki.qemu.org/download/qemu-${version}.tar.bz2"
-checksum=e1b079492ef4f4d1b25a7b3c37a40a9d0a220e1d6c62173a5129f889697c8726
+checksum=0e2f8eaef1e27de89f16eb11db18aaafb8d0ab09d9c04476a960bc7e3cc71978
 subpackages="qemu-user-static"
 
 if [ "$CROSS_BUILD" ]; then

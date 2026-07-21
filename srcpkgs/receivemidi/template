@@ -1,6 +1,6 @@
 # Template file for 'receivemidi'
 pkgname=receivemidi
-version=1.5.0
+version=1.6.1
 revision=1
 build_wrksrc="Builds/LinuxMakefile"
 hostmakedepends="pkg-config"
@@ -11,7 +11,7 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/gbevin/ReceiveMIDI"
 changelog="https://github.com/gbevin/ReceiveMIDI/releases"
 distfiles="https://github.com/gbevin/ReceiveMIDI/archive/refs/tags/${version}.tar.gz"
-checksum=0dcf43bfa2ad1ead4b8a5e42b6fce32da37923a5d6ca762ea9be5217e10aa730
+checksum=4b144de5ff6e30aead7ee87ead8beef27043b7deeb504dec1e0a93e05b77dd8c
 
 do_build() {
 	export JUCE_LDFLAGS="$LDFLAGS"
