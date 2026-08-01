@@ -1,7 +1,7 @@
 # Template file for 'helium-d77'
 pkgname=helium-d77
 version=0.1.4
-revision=1
+revision=2
 build_style=cargo
 hostmakedepends="pkg-config"
 makedepends="wayland-devel libxkbcommon-devel fontconfig-devel freetype-devel pam-devel"
