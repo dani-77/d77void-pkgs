@@ -5,7 +5,6 @@ revision=1
 archs="x86_64 aarch64"
 build_style=go
 go_import_path="github.com/ollama/ollama"
-go_ldflags="-s -w"
 hostmakedepends="cmake git"
 short_desc="Get up and running with large language models, locally"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
