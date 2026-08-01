@@ -1,2 +1,0 @@
-site="https://github.com/pop-os/xdg-desktop-portal-cosmic/tags"
-pattern="archive/refs/tags/epoch-\K[\d.]+(?=\.tar\.gz)"
