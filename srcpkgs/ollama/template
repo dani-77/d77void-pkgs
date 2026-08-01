@@ -2,7 +2,7 @@
 pkgname=ollama
 version=0.32.5
 revision=1
-archs="x86_64 aarch64"
+archs="x86_64"
 build_style=go
 go_import_path="github.com/ollama/ollama"
 hostmakedepends="cmake git"
@@ -10,9 +10,23 @@ short_desc="Get up and running with large language models, locally"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="MIT"
 homepage="https://ollama.com/"
-distfiles="https://github.com/ollama/ollama/archive/refs/tags/v${version}.tar.gz"
-checksum=41cd7d9204540223a53371443f7dad2ffadae56475375945d465ad898e60c27a
+# Pinned llama.cpp checkout ollama's inference backend (llama-server) is built
+# against. Must be kept in sync with the LLAMA_CPP_VERSION file inside the
+# ollama distfile whenever ${version} is bumped.
+_llama_cpp_version=b10091
+distfiles="https://github.com/ollama/ollama/archive/refs/tags/v${version}.tar.gz
+ https://github.com/ggml-org/llama.cpp/archive/${_llama_cpp_version}.tar.gz>llama.cpp-${_llama_cpp_version}.tar.gz"
+checksum="41cd7d9204540223a53371443f7dad2ffadae56475375945d465ad898e60c27a
+ 37da9cfee7ae5b0c9ea4e712e0d21c8242e5e7a781c02035498efb8a21a7e329"
+# Extracted manually in pre_build (vsrcextract): with two distfiles, xbps-src's
+# extract hook stops flattening $wrksrc down to the ollama source tree and
+# instead nests both distfiles' top-level dirs under it, which breaks the go
+# build-style's assumption that go.mod lives at $wrksrc.
+skip_extraction="llama.cpp-${_llama_cpp_version}.tar.gz"
 repository=d77
+# llama-server's ggml backend plugins under /usr/lib/ollama are dlopen'd by
+# absolute path at runtime, never linked against by other packages.
+noshlibprovides=yes
 
 system_accounts="_ollama"
 _ollama_homedir="/var/lib/ollama"
@@ -20,10 +34,48 @@ make_dirs="${_ollama_homedir} 0750 _ollama _ollama"
 
 pre_build() {
 	go generate ./...
+
+	# ollama's Go server shells out to a separate llama-server binary (the
+	# C++/GGML inference engine) at runtime; it isn't produced by "go build"
+	# and has to be built from the vendored llama.cpp via CMake. Only the
+	# generic x86_64 CPU backend is built (GGML_CPU_ALL_VARIANTS=OFF): left
+	# at its default, llama.cpp compiles the ggml-cpu backend once per
+	# SSE4.2/AVX/AVX2/AVX512(+ variants, selected at runtime, which is both
+	# unnecessary and far slower to build for a single-target x86_64 package.
+	local _llama_cpp_src="${wrksrc}/llama.cpp-${_llama_cpp_version}"
+	vsrcextract -C "${_llama_cpp_src}" "llama.cpp-${_llama_cpp_version}.tar.gz"
+
+	( cd "${_llama_cpp_src}" &&
+	  cmake -DPATCH_DIR="${wrksrc}/llama/compat" \
+	        -P "${wrksrc}/llama/compat/apply-patch.cmake" )
+
+	# build_style=go forces nopie=yes (Go binaries aren't built as PIE), which
+	# makes hardening.sh bake -fno-PIE/-no-pie into CFLAGS/CXXFLAGS/LDFLAGS for
+	# the whole package. llama-server's CMake build links shared libraries
+	# (libggml*.so etc.), and "-shared" together with "-no-pie" makes ld pull
+	# in crt1.o and fail with "undefined reference to `main'". Strip them back
+	# out for this C++ build only; it doesn't need to match the Go binary's
+	# PIE-ness.
+	local _cflags="${CFLAGS//-fno-PIE/}"
+	local _cxxflags="${CXXFLAGS//-fno-PIE/}"
+	local _ldflags="${LDFLAGS//-no-pie/}"
+
+	CFLAGS="${_cflags}" CXXFLAGS="${_cxxflags}" LDFLAGS="${_ldflags}" \
+		OLLAMA_LLAMA_CPP_SOURCE="${_llama_cpp_src}" \
+		cmake -B build . \
+			-DCMAKE_BUILD_TYPE=Release \
+			-DGGML_CPU_ALL_VARIANTS=OFF
+	CFLAGS="${_cflags}" CXXFLAGS="${_cxxflags}" LDFLAGS="${_ldflags}" \
+		OLLAMA_LLAMA_CPP_SOURCE="${_llama_cpp_src}" \
+		cmake --build build --parallel "${XBPS_MAKEJOBS}" \
+			--target ollama-llama-server-local
 }
 
 do_install() {
 	vlicense LICENSE
 	vbin _build-ollama-xbps/bin/ollama
 	vsv ollama
+
+	vmkdir usr/lib/ollama
+	vcopy "build/lib/ollama/*" usr/lib/ollama
 }
