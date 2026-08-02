@@ -1,0 +1,22 @@
+# Template file for 'cosmic-comp'
+pkgname=cosmic-comp
+version=1.5.0
+revision=1
+archs="x86_64* i686"
+build_style=cargo
+configure_args="--all --no-default-features --features logind"
+hostmakedepends="pkg-config cargo"
+makedepends="eudev-libudev-devel libseat-devel libxkbcommon-devel libinput-devel pixman-devel libgbm-devel libdisplay-info-devel"
+depends="eudev-libudev expat libxkbcommon libdisplay-info libgbm libseat libinput libgcc libdrm libelogind libevdev libwacom libcap libgudev libffi libpcre2 mtdev pixman"
+short_desc="Wayland compositor of pop-os cosmic shell"
+maintainer="Bella109 <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-comp"
+distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=ebdc79bd667b6ee167fcf5c4a616f56db7c24adfabc11ab3c3e572c5b2a52421
+
+do_install() {
+	CARGO_TARGET_DIR="target/${XBPS_RUST_TARGET}" make install
+	vbin target/${XBPS_RUST_TARGET}/release/cosmic-comp
+	vinstall data/cosmic.desktop 644 usr/share/wayland-session/cosmic.desktop
+}

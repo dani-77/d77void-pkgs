@@ -1,0 +1,25 @@
+# Template file for 'cosmic-launcher'
+pkgname=cosmic-launcher
+version=1.5.0
+revision=1
+archs="x86_64* i686"
+build_style="cargo"
+configure_args="--all"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel which"
+depends="libxkbcommon pop-launcher"
+short_desc="COSMIC App Launcher"
+maintainer="Bella109 <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-launcher"
+distfiles="https://github.com/pop-os/cosmic-launcher/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=908cb0ef7e609ce0dec59f6d1cb4c249551883da42c957cd9dcb2e45892c7ec7
+build_options="sccache"
+
+pre_build() {
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+}
+
+do_install() {
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
+}

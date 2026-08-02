@@ -1,0 +1,25 @@
+# Template file for 'cosmic-panel'
+pkgname=cosmic-panel
+version=1.5.0
+revision=1
+archs="x86_64* i686"
+build_style=cargo
+configure_args="--all"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel libgbm-devel"
+depends="libxkbcommon"
+short_desc="XDG Shell Wrapper Panel for COSMIC"
+maintainer="Bella109 <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-panel"
+distfiles="https://github.com/pop-os/cosmic-panel/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=66d8dfbc8aa62ff6a91e83e5bdcb5363c663aac5a58c111152b258054a815222
+build_options="sccache"
+
+pre_build() {
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+}
+
+do_install() {
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
+}
