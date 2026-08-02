@@ -1,0 +1,54 @@
+#!/bin/bash
+# Sync common/shlibs entries for a package with what it actually builds.
+#
+# Building a package updates its own soname mapping automatically (via the
+# 98-shlib-provides post-install hook), but *other* in-tree packages that
+# depend on it only resolve sonames through this static file at build time
+# (04-generate-runtime-deps). Bumping a package's version without updating
+# common/shlibs makes dependents fail with "cannot guess required shlibs,
+# aborting!". Run this right after bumping such a package.
+#
+# usage: ./shlibs <pkgname>
+set -euo pipefail
+cd "$(dirname "$0")"
+
+pkg="${1:?usage: $0 <pkgname>}"
+repo="hostdir/binpkgs/d77"
+
+./xbps-src pkg "$pkg"
+
+info=$(xbps-query --repository="$repo" -R -S "$pkg")
+pkgver=$(awk -F': ' '/^pkgver:/{print $2}' <<<"$info")
+sonames=$(awk '/^shlib-provides:/{f=1;next} /^[a-zA-Z_-]+:/{f=0} f{print $1}' <<<"$info")
+
+if [ -z "$sonames" ]; then
+    echo "shlibs: $pkg provides no shared libraries, nothing to sync"
+    exit 0
+fi
+
+newlines=$(while read -r so; do [ -n "$so" ] && echo "$so $pkgver"; done <<<"$sonames")
+
+awk -v pkg="$pkg" -v newlines="$newlines" '
+BEGIN { n = split(newlines, arr, "\n"); placed = 0; prefix = pkg "-" }
+{
+    is_match = 0
+    if (substr($2, 1, length(prefix)) == prefix && substr($2, length(prefix) + 1, 1) ~ /[0-9]/) {
+        is_match = 1
+    }
+    if (is_match) {
+        if (!placed) { for (i = 1; i <= n; i++) print arr[i]; placed = 1 }
+        next
+    }
+    print
+}
+END { if (!placed) for (i = 1; i <= n; i++) print arr[i] }
+' common/shlibs >common/shlibs.new
+
+if cmp -s common/shlibs common/shlibs.new; then
+    rm -f common/shlibs.new
+    echo "shlibs: $pkg already up to date"
+else
+    mv common/shlibs.new common/shlibs
+    echo "shlibs: synced $pkg -> $pkgver"
+    printf '  %s\n' "$newlines"
+fi

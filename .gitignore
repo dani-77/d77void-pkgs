@@ -17,6 +17,7 @@
 !/README.md
 !/common
 !/etc
+!/shlibs
 !/srcpkgs
 !/xbps-src
 etc/conf
