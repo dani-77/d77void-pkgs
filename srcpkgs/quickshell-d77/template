@@ -12,7 +12,7 @@ license="MIT"
 homepage="https://github.com/dani-77/quickshell-d77"
 changelog="https://github.com/dani-77/quickshell-d77/releases"
 distfiles="https://github.com/dani-77/quickshell-d77/archive/refs/tags/${version}.tar.gz"
-checksum=d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
+checksum=52dd951b0ba83ae2eaaeacdecfd9ad439cb0eae89a6b45b140339f5e89e0680c
 repository=d77
 
 post_install() {
