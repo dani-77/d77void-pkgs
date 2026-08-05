@@ -19,6 +19,7 @@
 !/etc
 !/shlibs
 !/srcpkgs
+!/sync-fixups.sh
 !/xbps-src
 etc/conf
 etc/conf.*
