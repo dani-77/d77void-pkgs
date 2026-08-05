@@ -18,6 +18,7 @@
 !/common
 !/etc
 !/shlibs
+!/shlibs.sh
 !/srcpkgs
 !/sync-fixups.sh
 !/xbps-src
