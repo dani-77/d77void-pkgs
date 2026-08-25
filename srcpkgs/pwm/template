@@ -21,7 +21,6 @@ do_build() {
 }
 
 do_install() {
-	sed -i '3i pipewire &' etc/xdg/pwm/startup.sh
 	sed -i '3i conky -c ~/.conkyrc1 &' etc/xdg/pwm/startup.sh
 	vbin target/release/pwm
 	vinstall pwm.desktop 644 usr/share/xsessions/
