@@ -358,7 +358,7 @@ libMagickCore-7.Q16HDRI.so.10 libmagick-7.1.0.10_1
 libMagickWand-7.Q16HDRI.so.10 libmagick-7.1.0.10_1
 libMagick++-7.Q16HDRI.so.5 libmagick-7.0.11.1_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.162 libpoppler-26.07.0_1
+libpoppler.so.163 libpoppler-26.08.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.3 poppler-cpp-26.04.0_1
 libpoppler-qt5.so.1 poppler-qt5-0.31.0_1
@@ -1295,7 +1295,7 @@ libre2.so.11 re2-2025.11.05_1
 libminizip.so.1 minizip-1.2.7_1
 libminizip-ng.so.4 minizip-ng-4.0.10_1
 libsrtp2.so.1 libsrtp-2.1.0_1
-libjsoncpp.so.26 jsoncpp-1.9.6_1
+libjsoncpp.so.27 jsoncpp-1.9.8_1
 libesmtp.so.6 libesmtp-1.0.6_21
 libcaca.so.0 libcaca-0.99.beta18_3
 libcaca++.so.0 libcaca-0.99.beta18_3
@@ -2374,10 +2374,8 @@ libFcitx5Config.so.6 libfcitx5-5.0.5_1
 libFcitx5GClient.so.2 fcitx5-gtk-5.0.4_1
 libFcitx5Qt5DBusAddons.so.1 fcitx5-qt5-5.0.3_1
 libFcitx5Qt5WidgetsAddons.so.2 fcitx5-qt5-5.0.3_1
-libdruntime-ldc-debug-shared.so.109 ldc-runtime-1.39.0_1
-libdruntime-ldc-shared.so.109 ldc-runtime-1.39.0_1
-libphobos2-ldc-shared.so.109 ldc-runtime-1.39.0_1
-libphobos2-ldc-debug-shared.so.109 ldc-runtime-1.39.0_1
+libdruntime-ldc-shared.so.112 ldc-runtime-1.42.0_1
+libphobos2-ldc-shared.so.112 libphobos-ldc-1.42.0_1
 libFcitx5Qt6DBusAddons.so.1 fcitx5-qt6-5.1.4_1
 libFcitx5Qt6WidgetsAddons.so.2 fcitx5-qt6-5.1.4_1
 libmarblewidget-qt5.so.28 marble5-17.12.2_1
@@ -4542,7 +4540,7 @@ libcamera-base.so.0.7 libcamera-0.7.0_1
 /usr/lib/lua/5.1/lpeg.so lua51-lpeg-1.1.0_2
 libopenrazer.so.0 libopenrazer-0.2.0_1
 libstaroffice-0.0.so.0 libstaroffice-0.0.7_1
-libbox2d.so.2 box2d-2.4.1_1
+libbox2d.so.3 box2d-3.1.1_1
 libhwy.so.1 highway-1.2.0_1
 libscenefx-0.5.so scenefx-0.5_1
 libnng.so.1 nng-1.5.2_1
@@ -4613,3 +4611,4 @@ libfyaml.so.0 libfyaml-0.9.6_1
 libcpptrace.so.1 cpptrace-1.0.4_1
 libcgif.so.0 cgif-0.5.3_1
 libdsk.so.5 libdsk-1.5.22_1
+libblend2d.so libblend2d-0.21.2_1
