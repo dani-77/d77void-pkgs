@@ -1,6 +1,12 @@
+<<<<<<<< HEAD:srcpkgs/linux7.0/template
 # Template file for 'linux7.0'
 pkgname=linux7.0
 version=7.0.14
+========
+# Template file for 'linux6.18'
+pkgname=linux6.18
+version=6.18.49
+>>>>>>>> upstream/master:srcpkgs/linux6.18/template
 revision=1
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Duncaen <duncaen@voidlinux.org>"
@@ -17,8 +23,13 @@ rc*) distfiles="https://git.kernel.org/torvalds/t/linux-${version%.*}-${version#
 	fi
 esac
 
+<<<<<<<< HEAD:srcpkgs/linux7.0/template
 checksum="bb7f6d80b387c757b7d14bb93028fcb90f793c5c0d367736ee815a100b3891f0
  03872ba37505da86fc75ac091141a4b76ba47bb4d99fbe1507ee075bc74eb2fa"
+========
+checksum="9106a4605da9e31ff17659d958782b815f9591ab308d03b0ee21aad6c7dced4b
+ 2eef7b766a11317ff87bc1a181d669d3ca0c17b9de2d48787f24688b3db8ad52"
+>>>>>>>> upstream/master:srcpkgs/linux6.18/template
 
 python_version=3
 
@@ -335,7 +346,11 @@ do_install() {
 	rm -f ${DESTDIR}/lib
 }
 
+<<<<<<<< HEAD:srcpkgs/linux7.0/template
 linux7.0-headers_package() {
+========
+linux6.18-headers_package() {
+>>>>>>>> upstream/master:srcpkgs/linux6.18/template
 	preserve=yes
 	nostrip=yes
 	noshlibprovides=yes
@@ -346,7 +361,11 @@ linux7.0-headers_package() {
 	}
 }
 
+<<<<<<<< HEAD:srcpkgs/linux7.0/template
 linux7.0-dbg_package() {
+========
+linux6.18-dbg_package() {
+>>>>>>>> upstream/master:srcpkgs/linux6.18/template
 	preserve=yes
 	nostrip=yes
 	noverifyrdeps=yes
