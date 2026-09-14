@@ -14,6 +14,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-settings"
 distfiles="https://github.com/pop-os/cosmic-settings/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=76b891ce2f4e30389a96ead032721851c35e8f948d699a93b03e5a8a34cdfd44
+repository=cosmic-d77
 
 do_install() {
 	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install

@@ -11,6 +11,7 @@ license="BSD-3-Clause"
 homepage="https://github.com/hyprwm/hyprutils"
 distfiles="https://github.com/hyprwm/hyprutils/archive/refs/tags/v${version}.tar.gz"
 checksum=1f097eb9915081f1b929973701643bcd8581b469c242eae5446275b120a3b229
+repository=hypr-d77
 
 post_install() {
 	vlicense LICENSE

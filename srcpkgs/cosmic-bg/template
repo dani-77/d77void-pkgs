@@ -14,6 +14,7 @@ license="MPL-2.0"
 homepage="https://github.com/pop-os/cosmic-bg"
 distfiles="https://github.com/pop-os/cosmic-bg/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=0de7f92a8bd5223cc1e5df29b50e4f9c11325184b0f063436e2e800a80d0da04
+repository=cosmic-d77
 build_options="sccache"
 
 pre_build() {

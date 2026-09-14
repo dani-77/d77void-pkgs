@@ -13,6 +13,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/xdg-desktop-portal-cosmic"
 distfiles="https://github.com/pop-os/xdg-desktop-portal-cosmic/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=15e8b70f5908a43273b821e92b9190e3a7a742b9012ab7ec8794400d91656e28
+repository=cosmic-d77
 
 export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"

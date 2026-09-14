@@ -15,6 +15,7 @@ license="MPL-2.0"
 homepage="https://github.com/pop-os/launcher"
 distfiles="https://github.com/pop-os/launcher/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=dd37b65197934ba40fa83fe64cefab1f30e9becd55a88ee2a7cfe9b007a8088d
+repository=cosmic-d77
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

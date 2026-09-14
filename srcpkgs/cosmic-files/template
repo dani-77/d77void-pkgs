@@ -14,6 +14,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-files"
 distfiles="https://github.com/pop-os/cosmic-files/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=ac55f0ed1042161c35aa60890d09891bc0719e53fced6ee4c4048ce60ece010d
+repository=cosmic-d77
 build_options="sccache"
 
 pre_build() {

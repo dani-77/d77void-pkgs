@@ -14,6 +14,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-notifications"
 distfiles="https://github.com/pop-os/cosmic-notifications/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=31c2c91430426ab847e32d880d3d6752089d3adc94eedf713a9b476d5a523e3a
+repository=cosmic-d77
 build_options="sccache"
 
 pre_build() {

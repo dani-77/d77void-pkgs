@@ -14,3 +14,4 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
 distfiles="https://github.com/pop-os/cosmic-workspaces-epoch/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=9aa6e076e285040be307cc021e02ccfdeafda2d678e73872db33e2448f63f1dc
+repository=cosmic-d77

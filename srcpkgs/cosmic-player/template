@@ -14,6 +14,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-player"
 distfiles="https://github.com/pop-os/cosmic-player/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=19e338af052d28ad04055ab653523e6efc9af16c752d711435b6133de1b1548c
+repository=cosmic-d77
 build_options="sccache"
 if [ "$XBPS_LIBC" = "glibc" ]; then
 	makedepends+=" libglib-devel"
