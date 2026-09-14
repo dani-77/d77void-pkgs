@@ -4659,6 +4659,7 @@ libaquamarine.so.14 aquamarine-0.15.0_1
 libhyprcursor.so.0 hyprcursor-0.1.13_1
 libhyprgraphics.so.4 hyprgraphics-0.5.1_2
 libhyprwire.so.3 hyprwire-0.3.1_1
+libhyprtoolkit.so.5 hyprtoolkit-0.5.4_3
 libblake3.so.0 libblake3-1.8.2_1
 libsexp.so.1 sfsexp-1.4.1_1
 libeot.so.0 libeot-0.01_1
