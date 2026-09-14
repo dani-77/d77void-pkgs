@@ -10,6 +10,6 @@ maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
 license="GPL-2.0-only"
 homepage="https://github.com/InioX/matugen"
 changelog="https://github.com/InioX/${pkgname}/releases/tag/v${version}"
-distfiles="https://github.com/InioX/${pkgname}/archive/refs/tags/v${version}.tar.gz"
+distfiles="${homepage}/archive/refs/tags/v${version}.tar.gz"
 checksum=82044ab8ac3e793b2b94f8f75917b348b4038585133a77c07f5de59c88d65244
 repository=d77

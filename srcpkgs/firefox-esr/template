@@ -3,7 +3,7 @@
 # THIS PKG MUST BE SYNCHRONIZED WITH "srcpkgs/firefox-esr-i18n".
 #
 pkgname=firefox-esr
-version=140.14.0
+version=140.15.0
 revision=1
 build_helper="rust"
 short_desc="Mozilla Firefox web browser - Extended Support Release"
@@ -11,7 +11,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="MPL-2.0, GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.mozilla.org/firefox/"
 distfiles="${MOZILLA_SITE}/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz"
-checksum=28006bd454e703932e1ea804918165774a1e21478b18e551cd1b38111d664239
+checksum=358bb03c550f95172f1e31694e4287da3411560df91e931cb25210efdf90e524
 
 lib32disabled=yes
 _llvmver=22 # needs to match rust
