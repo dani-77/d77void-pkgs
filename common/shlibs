@@ -1890,7 +1890,7 @@ libqwt-qt5.so.6.3 qwt-6.3.0_1
 libqwt-qt6.so.6.3 qwt-qt6-6.3.0_1
 
 # KDE6 plasma-frameworks
-KDE_Frameworks.6.29 kf6-base-6.29.0_1
+KDE_Frameworks.6.30 kf6-base-6.30.0_1
 libKF6BreezeIcons.so.6 libbreeze-icons-6.19.0_1
 libKF6Attica.so.6 kf6-attica-6.19.0_1
 libKF6Baloo.so.6 kf6-baloo-6.19.0_1
@@ -3593,6 +3593,7 @@ libglslang.so.16 glslang-16.2.0_1
 libglslang-default-resource-limits.so.16 glslang-16.2.0_1
 libSPIRV.so.16 glslang-16.2.0_1
 libSPIRV-Tools-shared.so SPIRV-Tools-2022.3_1
+libspirv-cross-c-shared.so.0 SPIRV-Cross-1.4.357.0_1
 libmaxminddb.so.0 libmaxminddb-1.3.2_1
 libmysqlpp.so.3 mysql++-3.2.5_1
 liblqr-1.so.0 liblqr-0.4.2_1
@@ -4431,7 +4432,7 @@ libThread.so root-6.24.06_1
 libTMVA.so root-6.24.06_1
 libMathCore.so root-6.24.06_1
 libCore.so root-6.24.06_1
-liblowdown.so.4 lowdown-3.1.1_1
+liblowdown.so.5 lowdown-3.2.1_1
 libjaylink.so.0 libjaylink-0.2.0_1
 libnvidia-container.so.1 libnvidia-container-1.10.0_1
 libnvidia-container-go.so.1 libnvidia-container-1.10.0_1
