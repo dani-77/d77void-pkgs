@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm64 7.2.7 Kernel Configuration
+# Linux/arm64 7.2.8 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="aarch64-linux-musl-gcc (GCC) 14.2.1 20250405"
 CONFIG_CC_IS_GCC=y
@@ -6233,7 +6233,7 @@ CONFIG_SENSORS_W83L786NG=m
 CONFIG_SENSORS_W83627HF=m
 CONFIG_SENSORS_W83627EHF=m
 CONFIG_SENSORS_XGENE=m
-# CONFIG_SENSORS_YOGAFAN is not set
+CONFIG_SENSORS_YOGAFAN=m
 
 #
 # ACPI drivers
