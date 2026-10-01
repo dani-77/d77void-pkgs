@@ -3720,7 +3720,7 @@ libgaminggearfx.so.0 libgaminggear-0.15.1_1
 libgaminggearwidget.so.0 libgaminggear-0.15.1_1
 libopkg.so.1 libopkg-0.4.4_2
 libpkgconf.so.8 libpkgconf-3.0.7_1
-libkodiplatform.so.19.0 kodi-platform-20180302_1
+libkodiplatform.so.21 kodi-platform-20250416_1
 libQuotient.so.0.9 libQuotient-0.9.1_1
 libQuotientQt6.so.0.9 libQuotient-0.9.1_1
 libipset.so.13 libipset-7.9_1
@@ -4620,6 +4620,7 @@ libbox2d.so.3 box2d-3.1.1_1
 libhwy.so.1 highway-1.2.0_1
 libscenefx-0.4.so scenefx-0.4.1_1
 libscenefx-0.5.so scenefx0.5-0.5_1
+libscenefx-0.5.so scenefx-0.5_1
 libnng.so.1 nng-1.5.2_1
 libsentry.so sentry-native-0.7.7_1
 libjose.so.0 libjose-14_1
