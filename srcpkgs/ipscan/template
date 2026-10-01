@@ -1,27 +1,66 @@
 # Template file for 'ipscan'
 pkgname=ipscan
 version=3.10.0
-revision=2
+revision=3
 archs="x86_64"
-build_style="fetch"
-hostmakedepends="tar xz"
+hostmakedepends="git openjdk25"
 depends="openjdk25"
 short_desc="Fast and friendly network scanner"
 maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
-license="GPL-3.0-or-later"
+license="GPL-2.0-only"
 homepage="https://angryip.org"
-distfiles="https://github.com/angryip/ipscan/releases/download/${version}/ipscan_${version}_amd64.deb"
-checksum=8c7286941d4bbbb1c804e9b7e3cb9dd6bc3974cfcee7ec89c3f24ffeb52a8217
+distfiles="https://github.com/angryip/ipscan/archive/refs/tags/${version}.tar.gz"
+checksum=2516b177a491e690ff5e456144ab0c56bbfae28d782f478657290e5e25f98847
+nocross="gradle runs the host JVM"
 repository=d77
 
-# Upstream's own /usr/bin/ipscan launcher already locates the jar itself
-# (glob "/usr/lib*/ipscan/ipscan*.jar") and reports its own Java version
-# requirement, so no post-install sed is needed anymore -- it also renamed
-# the .desktop file to net.azib.ipscan.desktop in this release. Requires
-# OpenJDK 25+ (--enable-native-access is a JDK 22+ flag; upstream's own
-# fallback message names 25).
+# Built from the source tarball with the bundled gradle wrapper (gradle and
+# the maven dependencies, SWT included, are downloaded at build time).
+#
+# build.gradle's `version = exec("git describe --tags", ...)` calls
+# Runtime.exec() directly; when git isn't found that throws immediately
+# (before the exec() wrapper's own failOnError check is reached), so git
+# must be present even though the tarball has no .git history to describe.
+# With git present but no .git dir, that exec() still comes back empty and
+# version falls back to "unknown" -- pin it instead.
+#
+# Upstream also ships no settings.gradle, so Gradle falls back to naming
+# the project after the source directory -- which xbps-src extracts as
+# "ipscan-${version}", not "ipscan". Between that and the unpinned version,
+# archiveFileName would become "ipscan-${version}-unknown-linux64.jar",
+# breaking do_install's vinstall path. Pin both explicitly.
+#
+# The `linux64` task is the fat jar; its `linux64.min` finalizer (proguard +
+# .deb/.rpm packaging through dpkg-deb/rpmbuild) is skipped -- only the jar
+# is needed.
+pre_build() {
+	echo "rootProject.name = 'ipscan'" > settings.gradle
+	vsed -i "s|^version = exec(\"git describe --tags\", \".\", false) ?: \"unknown\"|version = \"${version}\"|" \
+		build.gradle
+}
+
+do_build() {
+	export JAVA_HOME=/usr/lib/jvm/openjdk25
+	export GRADLE_USER_HOME="${wrksrc}/.gradle-home"
+	./gradlew --no-daemon linux64 -x linux64.min -x test
+}
+
+# Upstream's own /usr/bin/ipscan launcher locates the jar with the glob
+# "/usr/lib*/ipscan/ipscan*.jar", which needs OpenJDK 22+ for
+# --enable-native-access (its fallback message names 25). On Void,
+# /usr/lib64 is a symlink to /usr/lib, so that glob matches the jar
+# *twice*; `java -jar` only takes one, and the second path lands as an
+# unrecognized CLI argument that makes ipscan itself exit non-zero --
+# surfacing as the launcher's generic "need Java/OpenJDK 25+" message
+# regardless of the real (correctly installed) Java version. Point the
+# launcher at the single known-good path instead of the ambiguous glob.
 do_install() {
-	metapackage=yes
-	ar x ipscan_${version}_amd64.deb
-	tar xf data.tar.xz -C ${DESTDIR}
+	vinstall build/libs/ipscan-${version}-linux64.jar 755 usr/lib/ipscan
+	vsed -i "s|/usr/lib\*/ipscan/ipscan\*\.jar|/usr/lib/ipscan/ipscan-${version}-linux64.jar|" \
+		ext/deb-bundle/usr/bin/ipscan
+	vbin ext/deb-bundle/usr/bin/ipscan
+	vinstall ext/deb-bundle/usr/share/applications/net.azib.ipscan.desktop 644 usr/share/applications
+	vinstall ext/deb-bundle/usr/share/metainfo/net.azib.ipscan.metainfo.xml 644 usr/share/metainfo
+	vinstall resources/images/icon128.png 644 usr/share/pixmaps net.azib.ipscan.png
+	vdoc README.md
 }
