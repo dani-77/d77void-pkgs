@@ -1,7 +1,7 @@
 # Template file for 'libreoffice'
 pkgname=libreoffice
 version=26.8.0.3
-revision=2
+revision=3
 _jdk_ver=21
 build_helper="gir rust"
 build_style=configure # hack, avoid sourcing common/.../gnu-configure-args.sh
@@ -517,8 +517,8 @@ do_build() {
 		cp /usr/share/java/hsqldb-1.8.0.jar instdir/program/classes/hsqldb.jar
 	fi
 	# verbose=1
-	make ${make_build_target} PARALLELISM=$MAKEJOBS
-	make -C libreofficekit PARALLELISM=$MAKEJOBS
+	make ${make_build_target} PARALLELISM=${XBPS_MAKEJOBS}
+	make -C libreofficekit PARALLELISM=${XBPS_MAKEJOBS}
 }
 
 do_check() {
