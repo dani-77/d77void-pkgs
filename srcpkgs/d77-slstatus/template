@@ -1,0 +1,19 @@
+# Template file for 'd77-slstatus'
+pkgname=d77-slstatus
+version=1.1
+revision=1
+wrksrc="slstatus-${version}"
+archs="x86_64 x86_64-musl"
+build_style=gnu-makefile
+hostmakedepends="make"
+makedepends="alsa-lib-devel libX11-devel"
+depends="alsa-lib libX11"
+short_desc="Slstatus is a status monitor for dwm"
+maintainer="Daniel Azevedo <daniazevedo77@posteo.net>"
+license="GPL-3.0-or-later"
+homepage="https://tools.suckless.org/slstatus"
+#changelog=""
+distfiles="https://github.com/dani-77/slstatus/archive/refs/tags/${version}.tar.gz"
+checksum=cd3334f7ada12f4ea353df1f384cf87a743868c62dbbb3b064796983fb8a526d
+replaces="slstatus>=0"
+repository=d77
