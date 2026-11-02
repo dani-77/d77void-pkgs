@@ -1,6 +1,6 @@
 # Template file for 'weechat'
 pkgname=weechat
-version=4.10.1
+version=4.10.2
 revision=1
 build_style=cmake
 configure_args="-DENABLE_MAN=ON -DENABLE_PERL=ON
@@ -18,7 +18,7 @@ license="GPL-3.0-or-later"
 homepage="https://www.weechat.org"
 changelog="https://raw.githubusercontent.com/weechat/weechat/master/CHANGELOG.md"
 distfiles="https://www.weechat.org/files/src/weechat-${version}.tar.xz"
-checksum=b8744c6f5dc5543062791f563e0516dbc96a36161e1a03c468b3b7dcc8be5aff
+checksum=6fcd05f350c808a4206d6951af36a9eec11b145b6a1a2a8a2b29dd3502e07022
 lib32disabled=yes
 
 subpackages="weechat-aspell weechat-devel weechat-ruby weechat-python weechat-tcl weechat-lua weechat-perl"

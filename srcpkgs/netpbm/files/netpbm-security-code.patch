@@ -71,17 +71,6 @@ diff -up netpbm-10.58.01/converter/pbm/pbmtolj.c.security-code netpbm-10.58.01/c
      packBufferSize = rowBufferSize + (rowBufferSize + 127) / 128 + 1;
      deltaBufferSize = rowBufferSize + rowBufferSize / 8 + 10;
  
-diff -up netpbm-10.58.01/converter/pbm/pbmtomda.c.security-code netpbm-10.58.01/converter/pbm/pbmtomda.c
---- netpbm-10.58.01/converter/pbm/pbmtomda.c.security-code	2012-04-09 15:31:45.000000000 +0200
-+++ netpbm-10.58.01/converter/pbm/pbmtomda.c	2012-04-09 15:40:03.195619889 +0200
-@@ -179,6 +179,7 @@ int main(int argc, char **argv)
-     
-     nOutRowsUnrounded = bScale ? nInRows/2 : nInRows;
- 
-+    overflow_add(nOutRowsUnrounded, 3);
-     nOutRows = ((nOutRowsUnrounded + 3) / 4) * 4;
-         /* MDA wants rows a multiple of 4 */   
-     nOutCols = nInCols / 8;
 diff -up netpbm-10.58.01/converter/pbm/pbmtoxbm.c.security-code netpbm-10.58.01/converter/pbm/pbmtoxbm.c
 --- netpbm-10.58.01/converter/pbm/pbmtoxbm.c.security-code	2012-04-09 15:31:45.000000000 +0200
 +++ netpbm-10.58.01/converter/pbm/pbmtoxbm.c	2012-04-09 15:40:03.196619876 +0200
