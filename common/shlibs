@@ -340,9 +340,9 @@ libogg.so.0 libogg-1.3.0_1
 libvorbis.so.0 libvorbis-1.2.1rc1_1
 libvorbisenc.so.2 libvorbis-1.2.1rc1_1
 libvorbisfile.so.3 libvorbis-1.2.1rc1_1
-libtheora.so.0 libtheora-1.0_1
-libtheoradec.so.1 libtheora-1.0_1
-libtheoraenc.so.1 libtheora-1.0_1
+libtheora.so.1 libtheora-1.2.0_1
+libtheoradec.so.2 libtheora-1.2.0_1
+libtheoraenc.so.2 libtheora-1.2.0_1
 libcdda_interface.so.0 libcdparanoia-10.2_10
 libcdda_paranoia.so.0 libcdparanoia-10.2_10
 libasound.so.2 alsa-lib-1.0.20_1
@@ -534,8 +534,8 @@ libgimpconfig-3.0.so.0 libgimp-3.0.0_1
 libgimpmath-3.0.so.0 libgimp-3.0.0_1
 libgimpcolor-3.0.so.0 libgimp-3.0.0_1
 libgimpmodule-3.0.so.0 libgimp-3.0.0_1
-libgmic.so.3 libgmic-3.5.3_1
-libcgmic.so.3 libgmic-3.5.3_1
+libgmic.so.4 libgmic-4.0.7_1
+libcgmic.so.4 libgmic-4.0.7_1
 libexiv2.so.28 exiv2-0.28.1_1
 libKF5Holidays.so.5 kholidays-5.47.0_1
 libKF6PulseAudioQt.so.5 pulseaudio-qt-1.5_1
@@ -873,8 +873,8 @@ librhythmbox-core.so.10 librhythmbox-3.4.1_1
 libdmapsharing-4.0.so.3 libdmapsharing-3.9.13_1
 libgexiv2.so.2 libgexiv2-0.6.1_1
 libgexiv2-0.16.so.4 libgexiv2-0.16-0.16.0_1
-libraw.so.23 libraw-0.21.0_1
-libraw_r.so.23 libraw-0.21.0_1
+libraw.so.25 libraw-0.22.3_1
+libraw_r.so.25 libraw-0.22.3_1
 libdjvulibre.so.21 libdjvulibre-3.5.24_1
 libgxps.so.2 libgxps-0.2.0_1
 libt1.so.5 libt1-5.1.2_1
@@ -1207,7 +1207,7 @@ libprotobuf-vala.so.0 libprotobuf-vala-0.1.0_1
 librlog.so.5 librlog-1.4_1
 libtinyxml.so.0 tinyxml-2.6.2_1
 libtinyxml2.so.11 tinyxml2-11.0.0_1
-libbluray.so.2 libbluray-1.0.0_1
+libbluray.so.4 libbluray-1.5.0_1
 libnfs.so.14 libnfs-5.0.1_1
 libzip.so.5 libzip-1.7.3_2
 libluajit-5.1.so.2 LuaJIT-2.0.0_1
@@ -1400,7 +1400,7 @@ libgpaste-2.so.0 libgpaste-42.1_1
 libgpaste-gtk-3.so.0 libgpaste-42.1_1
 libgpaste-gtk4.so.0 libgpaste-42.1_1
 libthreadutil.so.6 libupnp-1.6.18_1
-libupnp.so.17 libupnp-1.14.0_1
+libupnp.so.22 libupnp-2.0.2_1
 libixml.so.11 libupnp-1.14.0_1
 libupnpp.so.17 libupnpp-1.0.3_1
 libgeocode-glib-2.so.0 geocode-glib-3.26.4_2
@@ -3026,7 +3026,7 @@ libiscsi.so.9 libiscsi-1.19.0_1
 libgme.so.0 libgme-0.6.1_1
 libzmusic.so.1 ZMusic-1.1.2_1
 libzmusiclite.so.1 ZMusic-1.1.2_1
-libsidplayfp.so.6 libsidplayfp-2.1.0_1
+libsidplayfp.so.7 libsidplayfp-3.1.2_1
 libstilview.so.0 libsidplayfp-1.8.7_1
 libczmq.so.4 czmq-4.0.1_1
 liblz.so.1 lzlib-1.8_1
@@ -3118,7 +3118,7 @@ libbctoolbox.so.1 bctoolbox-0.6.0_1
 libbcmatroska2.so.0 bcmatroska2-5.2.1_1
 libbcg729.so.0 bcg729-1.1.1_1
 libortp.so.15 ortp-4.4.0_1
-libsuperlu.so.6 superlu-6.0.1_1
+libsuperlu.so.7 superlu-7.0.1_1
 libgosu.so.0 gosu-0.12.0_1
 libyara.so.10 libyara-4.3.0_1
 libyaz_icu.so.5 yaz-5.23.1_1
@@ -3557,7 +3557,7 @@ libSoapySDR.so.0.9 SoapySDR-0.9.0_1
 libeditorconfig.so.0 editorconfig-0.12.2_1
 libcfitsio.so.10 cfitsio-4.2.0_1
 libapparmor.so.1 libapparmor-2.12.0_1
-libplacebo.so.360 libplacebo-7.360.1_1
+libplacebo.so.387 libplacebo-7.387.0_1
 libw2xc.so waifu2x-converter-cpp-5.2_1
 libnova-0.15.so.0 libnova-0.15.0_1
 libcue.so.2 libcue-2.2.0_1
@@ -4563,11 +4563,11 @@ libpanel-1.so.1 libpanel-1.0.1_1
 libqrtr.so.1 qrtr-ns-1.0_1
 libbpf.so.1 libbpf-1.0.0_1
 libImath-3_1.so.29 imath-3.1.9_1
-libIex-3_2.so.31 libopenexr-3.2.1_1
-libIlmThread-3_2.so.31 libopenexr-3.2.1_1
-libOpenEXR-3_2.so.31 libopenexr-3.2.1_1
-libOpenEXRCore-3_2.so.31 libopenexr-3.2.1_1
-libOpenEXRUtil-3_2.so.31 libopenexr-3.2.1_1
+libIex-3_5.so.34 libopenexr-3.5.3_1
+libIlmThread-3_5.so.34 libopenexr-3.5.3_1
+libOpenEXR-3_5.so.34 libopenexr-3.5.3_1
+libOpenEXRCore-3_5.so.34 libopenexr-3.5.3_1
+libOpenEXRUtil-3_5.so.34 libopenexr-3.5.3_1
 libdate-tz.so.3 chrono-date-3.0.1_1
 libayatana-ido3-0.4.so.0 ayatana-ido-0.9.2_1
 libayatana-indicator3.so.7 libayatana-indicator-0.9.3_1
@@ -4692,7 +4692,7 @@ libMpvQt.so.4 mpvqt-1.2.1_1
 libtomlplusplus.so.3 tomlplusplus-3.4.0_1
 libglycin-2.so.0 glycin-2.0.7_1
 libglycin-gtk4-2.so.0 glycin-gtk4-2.0.7_1
-libresvg.so.0.48 libresvg0-0.48.1_1
+libresvg.so.0.50 libresvg0-0.50.0_1
 libgpiod.so.3 libgpiod-2.2_4
 libgpiodcxx.so.2 libgpiod-2.2_4
 libigloo.so.0 libigloo-0.9.5_1
