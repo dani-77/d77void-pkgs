@@ -358,7 +358,7 @@ libMagickCore-7.Q16HDRI.so.10 libmagick-7.1.0.10_1
 libMagickWand-7.Q16HDRI.so.10 libmagick-7.1.0.10_1
 libMagick++-7.Q16HDRI.so.5 libmagick-7.0.11.1_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.165 libpoppler-26.10.0_1
+libpoppler.so.166 libpoppler-26.11.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.3 poppler-cpp-26.04.0_1
 libpoppler-qt5.so.1 poppler-qt5-0.31.0_1
@@ -1088,9 +1088,9 @@ libxar.so.1 xar-1.6.1_9
 libmikmod.so.3 libmikmod-3.1.12_1
 libSDL_sound-1.0.so.1 SDL_sound-1.0.3_1
 libgtksourceview-2.0.so.0 gtksourceview2-2.10.5_1
-libxdot.so.4 graphviz-libs-2.28.0_6
+libxdot.so.5 graphviz-libs-16.0.0_1
 libgvpr.so.2 graphviz-libs-2.28.0_6
-libcgraph.so.8 graphviz-libs-14.0.0_1
+libcgraph.so.10 graphviz-libs-16.0.0_1
 libgvc.so.7 graphviz-libs-13.0.0_1
 libcdt.so.6 graphviz-libs-13.0.0_1
 libpathplan.so.4 graphviz-libs-2.28.0_6
@@ -4703,3 +4703,4 @@ libcpptrace.so.1 cpptrace-1.0.4_1
 libcgif.so.0 cgif-0.5.3_1
 libdsk.so.5 libdsk-1.5.22_1
 libblend2d.so libblend2d-0.21.2_1
+libqjs.so.0 libquickjs-ng-0.18.0_1
