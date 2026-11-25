@@ -4668,9 +4668,9 @@ libhyprutils.so.13 hyprutils-0.14.2_1
 libhyprlang.so.2 hyprlang-0.6.8_5
 libaquamarine.so.15 aquamarine-0.16.0_1
 libhyprcursor.so.0 hyprcursor-0.1.13_1
-libhyprgraphics.so.5 hyprgraphics-0.6.0_1
+libhyprgraphics.so.6 hyprgraphics-0.7.0_1
 libhyprwire.so.3 hyprwire-0.3.1_1
-libhyprtoolkit.so.6 hyprtoolkit-0.6.0_1
+libhyprtoolkit.so.7 hyprtoolkit-0.7.0_1
 libblake3.so.0 libblake3-1.8.2_1
 libsexp.so.1 sfsexp-1.4.1_1
 libeot.so.0 libeot-0.01_1
