@@ -1997,7 +1997,7 @@ libKF6Syndication.so.6 kf6-syndication-6.19.0_1
 libKF6SyntaxHighlighting.so.6 kf6-syntax-highlighting-6.19.0_1
 libKF6ThreadWeaver.so.6 kf6-threadweaver-6.19.0_1
 # KDE Plasma
-KDE_Plasma.6.7.5 kde-plasma-base-6.7.5_1
+KDE_Plasma.6.8.3 kde-plasma-base-6.8.3_1
 libKQuickImageEditor.so.1 kquickimageeditor-0.6.0_1
 libKNightTime.so.0 knighttime-6.5.1_1
 libklookandfeel.so.6 plasma-workspace-6.5.1_1
@@ -2017,15 +2017,15 @@ libkworkspace6.so.6 kworkspace-6.5.1_1
 libKPipeWire.so.6 kpipewire-6.5.1_1
 libKPipeWireRecord.so.6 kpipewire-6.5.1_1
 libKPipeWireDmaBuf.so.6 kpipewire-6.5.1_1
+libKPipeWireMonitor.so.6 kpipewire-6.8.2_1
 libPlasmaActivities.so.7 plasma-activities-6.5.1_1
 libPlasmaActivitiesStats.so.1 plasma-activities-stats-6.5.1_1
-libPlasma.so.7 libplasma-6.6.1_1
-libPlasmaQuick.so.7 libplasma-6.6.1_1
+libPlasma.so.8 libplasma-6.8.2_1
+libPlasmaQuick.so.8 libplasma-6.8.2_1
 libPlasma5Support.so.6 plasma5support-6.5.1_1
 libkdecorations3.so.6 kf6-kdecoration-6.5.1_1
 libkdecorations3private.so.2 kf6-kdecoration-6.5.1_1
 libkwin.so.6 kwin-6.5.1_1
-libkwin-x11.so.6 kwin-x11-6.5.1_1
 libLayerShellQtInterface.so.6 layer-shell-qt-6.5.1_1
 libcxx-rust-cssparser.so.1 cxx-rust-cssparser-1.0.0_1
 libUnion.so.6 union-6.7.4_1
@@ -4138,10 +4138,10 @@ libsepol.so.2 libsepol-3.11_1
 libfrrcares.so.0 libfrr-7.3.1_1
 libhugetlbfs.so.0 libhugetlbfs-2.22_1
 libmonocypher.so.4 monocypher-4.0.1_1
-libkpathsea.so.6 texlive-20200406_1
-libtexluajit.so.2 texlive-LuaTeX-20200406_1
-libtexlua53.so.5 texlive-LuaTeX-20200406_1
-libptexenc.so.1 texlive-20200406_1
+libkpathsea.so.6 libkpathsea-20260301_4
+libtexluajit.so.2 libtexlua-20260301_4
+libtexlua53.so.5 libtexlua-20260301_4
+libptexenc.so.1 libptexenc-20260301_4
 libsynctex.so.2 libsynctex-20200406_3
 libdolphinvcs.so.6 dolphin-24.02.0_1
 libocl.so.2019.07 opencamlib-2019.07_1
@@ -4618,8 +4618,8 @@ libliftoff.so.0 libliftoff-0.4.1_1
 libscfg.so libscfg-0.1.1_1
 libmsgraph-0.so.1 msgraph-0.2.1_1
 libgtk-session-lock.so.0 gtk-session-lock-0.2.0_1
-libcamera.so.0.7 libcamera-0.7.0_1
-libcamera-base.so.0.7 libcamera-0.7.0_1
+libcamera.so.0.8 libcamera-0.8.0_1
+libcamera-base.so.0.8 libcamera-0.8.0_1
 /usr/lib/lua/5.1/lpeg.so lua51-lpeg-1.1.0_2
 libopenrazer.so.0 libopenrazer-0.2.0_1
 libstaroffice-0.0.so.0 libstaroffice-0.0.7_1
